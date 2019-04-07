@@ -1,0 +1,339 @@
+@import url("https://fonts.googleapis.com/css?family=Abril+Fatface|Roboto|Source+Serif+Pro|Srisakdi");
+
+/*font-family: 'Abril Fatface', cursive;
+font-family: 'Source Serif Pro', serif;
+font-family: 'Roboto', sans-serif;
+font-family: 'Srisakdi', cursive;*/
+
+#cover{
+	background: url(../img/bu2.jpg);
+	background-size: cover;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	-ms-background-size: cover;
+	background-color: #000;
+	height: 100%;
+	width: 100%;
+	margin-top: 30px;
+	padding: 50px 0px;
+}
+#cover p{
+	text-shadow: 4px 4px 4px #fff;
+}
+#heading{
+	text-align: center;
+	text-shadow: 2px 2px #fff;
+	padding: 7em 0  8em 0;
+
+}
+#heading a{
+	text-decoration: none;
+	outline: none;
+}
+#navigation{
+	background-color: #F5F5F5;
+}
+#navi{
+	margin-top: 20px;
+}
+#navigation li{
+	padding-left: 5px;
+}
+#navigation li a{
+	color: #3b5998;
+}
+#popular-route{
+	background: #E8E8E8;
+	padding-top: 30px;
+}
+#route{
+	margin-top: 40px;
+}
+
+.card {
+	padding: 10px 5px 10px 5px;
+}
+
+#move-right {
+	 text-align: right;
+
+}
+.header{
+	margin: 20px 0 20px 0;
+	text-transform: uppercase;
+}
+.header h1{
+	color: #3b5998;
+}
+#image{
+	padding: 10px 10px 30px 30px;
+}
+img{
+	width:100%;
+}
+.panel {
+	margin-bottom: 20px;
+	background-color: #fff;
+	border: 1px solid transparent;
+	border-radius: 4px;
+}
+.panel-default{
+	border-color:#B1B2AC;
+}
+.panel-body{
+	padding:15px;
+	box-sizing: border-box;
+}
+.panel-body a{
+	font-size: 15px;
+	text-decoration: none;
+	outline: none;
+}
+#gallery{
+	margin-top: 20px;
+	margin-bottom: 40px;
+}
+#partner{
+	background: #E8E8E8;
+	padding: 20px 0;
+}
+
+
+
+#payment{
+  position: relative;
+  width: 50%;
+}
+
+.image {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  /*transition: .5s ease;*/
+  background-color: #008CBA;
+}
+
+#gallery:hover .overlay {
+  opacity: 1;
+}
+
+.text {
+  color: #3b5998 ;
+  font-size:20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+#team{
+	margin-top: 30px;
+
+	
+}
+.member-list{
+	background: #E8E8E8;
+	padding: 20px 0;
+}
+
+#member img {
+	border-radius: 50%;
+	width: 80%;
+}
+#member {
+	transition: transform 0.3s;
+}
+#member-box{
+	margin: 20px 20px 40px 20px;
+	
+}
+#member-box:hover #member{
+    -ms-transform: scale(1.2); /* IE 9 */
+    -webkit-transform: scale(1.2); /* Safari 3-8 */
+    transform: scale(1.2); 
+}
+
+
+#info a,p{
+	color: #000;
+	text-decoration: none;
+	outline: none;
+	color: #3b5998;
+}
+
+#info h1{
+	font-family: 'Abril Fatface', cursive;
+	font-size: 3em;
+}
+#foot{
+	background-color: #0F1016;
+	font-family:'Source Serif Pro', serif;
+	font-color: white;
+	margin: 30px 0;
+	padding: 10px 20px;
+}
+#foot h3{
+	font-family:  'Abril Fatface', cursive;
+	color: #3b5998;
+	padding: 10px 0; 
+
+}
+#about, #about a{
+	color: #fff;
+}
+#foot-nav{
+	padding-left: 20px;
+	color: #000;
+	padding: 10px 10px;
+	outline: none;
+	text-decoration: none;
+	font-size: 20px;
+}
+
+/*route.html*/
+
+/*#route-plan{
+	background: url(../img/bus6.jpeg);
+	background-size: cover;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	-ms-background-size: cover;
+	background-color: #000;
+	padding: 50px 0px;
+	height: 100%;
+	width: 100%;
+	margin-top: 20px;
+}*/
+#one{
+	font-size: 20px;
+	padding: 20px 20px 20px 50px;
+	margin: 3em 0 3em 0;
+	background: #E8E8E8;
+}
+#aa{
+	background: #fff;
+	padding-top: 30px;
+
+}
+#search{
+	background: #fff;
+	padding-bottom: 30px;
+}
+
+label {
+	margin: 15px 0 20px 0;
+}
+label.text-my {
+	height: 10px;
+	font-weight: 700;
+}
+.myButton{
+	margin-top: 30px;
+}
+
+
+/*bus.html*/
+#header{ 
+  margin-top: 20px;
+}
+
+/*label{
+    vertical-align: top;
+    height: 25px;
+    font-family: 'Roboto Slab', serif;
+    font-size: 20px;
+}*/
+label .text-my{
+  font-size: 15px;
+}
+.tripSearchButton{
+  background-color: #fff;
+}
+#page1{
+	background: #E8E8E8;
+	padding-top: 30px;
+  
+}
+.time-box{
+	margin-top: 20px;
+}
+#schdule{
+  font-size: 15px;
+  background: #DDDDDD;
+  padding-left: 20px;
+}
+.side-box h3{
+    margin-bottom: 10px;
+    font-weight: 500;
+    border-bottom: 1px solid #eee;
+    font-size: 30px;
+}
+.Time{
+  margin: 20px 10px 20px 10px;
+
+}
+#box1{
+  background-color: #fff;
+  margin:20px 0;
+  float: left;
+  height: 40%;
+}
+#box2{
+  margin: 20px auto;
+}
+
+/*select.html*/
+.panel-default{
+	border-color:#B1B2AC;
+}
+.panel-body{
+	padding:15px;
+	box-sizing: border-box;
+}
+.panel-body a{
+	font-size: 15px;
+}
+#payment{
+	margin-right: 30px;
+	font-size: 15px;
+}
+#payment h2{
+	padding-bottom: 10px;
+}
+#contact{
+	font-size: 20px;
+}
+.section{
+	font-size: 20px;
+	margin-top: 20px;
+}
+.panel-heading{
+	background: #B1B2AC;
+	padding: 10px 5px;
+	text-align: center;
+	color: #3b5998; 
+}
+.panel-body{
+	font-size: 15px;
+}
+#select-seat{
+	margin:0 15%;
+}
+
+

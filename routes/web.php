@@ -14,3 +14,12 @@
 Route::get('/', function () {
     return view('layouts.master');
 });
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
+
+Route::get('bus', 'BusController@index')->name('bus.index');
+Route::get('bus/{type}', 'BusController@select')->name('bus.select');
+Route::get('/seats', 'BusController@seats')->name('bus.seats');
+Route::resource('users','Admin\UserController',['as' => 'admin']);
