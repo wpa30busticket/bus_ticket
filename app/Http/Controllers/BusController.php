@@ -16,7 +16,7 @@ class BusController extends Controller
      */
     public function index(BusFilters $filter)
     {
-        // dd($request->all());
+         //dd($request->all());
         $townships = Township::get();
         if (request('route')) {
             $bus = Bus::filter($filter)->get();

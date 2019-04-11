@@ -657,7 +657,7 @@
 							<div class="row" id="search">
 								
 								<div class="col-md-12 text-center">
-									<a href="info.html" class="myButton btn btn-success">Continue Info</a>
+									<a href="{{ route('bus.customer-login') }}" class="myButton btn btn-success">Continue Info</a>
 								</div>
 							</div>
 						</div>

@@ -11,18 +11,19 @@
 |
 */
 
-Route::get('/', function () {
-    return view('layouts.master');
-});
+// Route::get('/', function () {
+//     return view('bus.index');
+// });
 
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
-Route::get('bus', 'BusController@index')->name('bus.index');
+Route::get('/', 'BusController@index')->name('bus.index');
 Route::get('bus/{type}', 'BusController@select')->name('bus.select');
 Route::get('/seats', 'BusController@seats')->name('bus.seats');
-Route::resource('users','Admin\UserController',['as' => 'admin']);
+Route::get('seats/customer-login', 'BusController@customer-login')->name('customer.login');
+// Route::resource('users','Admin\UserController',['as' => 'admin']);
 
 //backend login
 Route::get("backend", "BackLoginController@getLogin")->name("backend.get");
@@ -33,5 +34,5 @@ Route::get("backend/logout", "BackLoginController@logout")->name("backend.logout
 Route::get('dashboard', 'BackendController@index')->name('dashboard.index');
 
 
-Route::get('/home', 'HomeController@index')->name('home');
-Auth::routes();
+//Route::get('/home', 'HomeController@index')->name('home');
+//Auth::routes();
