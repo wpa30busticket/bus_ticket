@@ -20,7 +20,7 @@ class BusController extends Controller
         $townships = Township::get();
         if (request('route')) {
             $bus = Bus::filter($filter)->get();
-            return $bus;
+            // return $bus;
             return view('bus.select_seat',compact('bus'));
         }
 
@@ -35,6 +35,10 @@ class BusController extends Controller
 
     public function seats() {
         return view('bus.seats');
+    }
+
+    public function customerlogin() {
+        return view('auth.login');
     }
     /**
      * Show the form for creating a new resource.

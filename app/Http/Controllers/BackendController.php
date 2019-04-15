@@ -1,6 +1,7 @@
 <?php
 namespace App\Http\Controllers;
 use Illuminate\Http\Request;
+use DB;
 class BackendController extends Controller
 {
     public function __construct() {
@@ -11,11 +12,6 @@ class BackendController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
-    {
-        //
-        return view("backend.index");
-    }
     /**
      * Show the form for creating a new resource.
      *

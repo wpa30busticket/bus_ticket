@@ -22,17 +22,23 @@ Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/', 'BusController@index')->name('bus.index');
 Route::get('bus/{type}', 'BusController@select')->name('bus.select');
 Route::get('/seats', 'BusController@seats')->name('bus.seats');
-Route::get('seats/customer-login', 'BusController@customer-login')->name('customer.login');
+Route::get('/seats/customerlogin', 'BusController@customerlogin')->name('customer.login');
 // Route::resource('users','Admin\UserController',['as' => 'admin']);
 
 //backend login
-Route::get("backend", "BackLoginController@getLogin")->name("backend.get");
-Route::post("backend", "BackLoginController@postLogin")->name("backend.post");
-Route::get("backend/logout", "BackLoginController@logout")->name("backend.logout");
+Route::group(['prefix' => 'backend'], function() {     
+
+	Route::get("/", "BackLoginController@getLogin")->name("backend.get");
+	Route::post("/", "BackLoginController@postLogin")->name("backend.post");
+	Route::get("/logout", "BackLoginController@logout")->name("backend.logout");
+});
 
 //backend dashboard
-Route::get('dashboard', 'BackendController@index')->name('dashboard.index');
-
+Route::group(['prefix' => 'dashboard',], function( ) {
+	// Route::get('/', 'BackendController@index')->name('dashboard.index');
+	Route::get('/', 'DashBoardController@login')->name('dashboard.index');
+	Route::get('registered_users', 'DashBoardController@index')->name('registered.users');
+	Route::delete('/registered_users/{id}/delete', 'DashBoardController@destroy')->name('registered_users.destroy');
+});
 
 //Route::get('/home', 'HomeController@index')->name('home');
-//Auth::routes();
