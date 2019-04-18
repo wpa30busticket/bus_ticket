@@ -38,9 +38,13 @@ Route::group(['prefix' => 'backend'], function() {
 //backend dashboard
 Route::group(['prefix' => 'dashboard',], function( ) {
 	// Route::get('/', 'BackendController@index')->name('dashboard.index');
-	Route::get('/', 'DashBoardController@login')->name('dashboard.index');
-	Route::get('registered_users', 'DashBoardController@index')->name('registered.users');
-	Route::delete('/registered_users/{id}/delete', 'DashBoardController@destroy')->name('registered_users.destroy');
+	Route::get('/', 'DashController@login')->name('dashboard.index');
+	Route::get('registered_users', 'DashController@index')->name('registered.users');
+	Route::delete('/registered_users/{id}/delete', 'DashController@destroy')->name('registered_users.destroy');
 });
 
 //Route::get('/home', 'HomeController@index')->name('home');
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');

@@ -7,6 +7,11 @@ class BackendController extends Controller
     public function __construct() {
         $this->middleware("backend");
     }
+
+    public function index() {
+        $users = DB::table('users')->get();
+        return view('backend.index', compact("users"));
+    }
     /**
      * Display a listing of the resource.
      *
