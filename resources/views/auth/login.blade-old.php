@@ -622,8 +622,7 @@ label.valid {
 
                     <div class="signin-form">
                         <h2 class="form-title">Sign up</h2>
-                        <form method="POST" class="register-form" id="login-form" action="{{ route('login') }}">
-                          @csrf
+                        <form method="POST" action="{{ route('login') }}" class="login-form" id="register-form">                          @csrf
                             <div class="form-group">
                                 <label for="your_name"><i class="zmdi zmdi-account material-icons-name"></i></label>
                                 <input type="text" name="your_name" id="your_name" placeholder="Your Name" required autofocus>

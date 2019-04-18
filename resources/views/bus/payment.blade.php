@@ -1,10 +1,6 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<title>Document</title>
-</head>
-<body>
-		<h1>payment here</h1>
-</body>
-</html>
+@extends('layouts/app')
+@section('content')
+
+<h1>hello world</h1>
+
+@endsection

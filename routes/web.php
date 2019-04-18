@@ -23,6 +23,8 @@ Route::get('/', 'BusController@index')->name('bus.index');
 Route::get('bus/{type}', 'BusController@select')->name('bus.select');
 Route::get('/seats', 'BusController@seats')->name('bus.seats');
 Route::get('/seats/customerlogin', 'BusController@customerlogin')->name('customer.login');
+Route::get('/seats/guest', 'BusController@guest')->name('guest.login');
+Route::post('/seats/guest', 'BusController@store')->name('guest.store');
 // Route::resource('users','Admin\UserController',['as' => 'admin']);
 
 //backend login
