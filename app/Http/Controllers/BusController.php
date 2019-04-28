@@ -78,6 +78,8 @@ class BusController extends Controller
         $guest->nrc = $request->nrc;
         
         $guest->save();
+
+        return redirect('bus/payment');
    }
 
     /**

@@ -20,6 +20,16 @@ class DashController extends Controller
     	return view('backend.registered_users', compact("users"));
     }
 
+    public function guest() {
+        $guests = DB::table('guests')->get();
+        return view('backend.guest', compact("guests"));
+    }
+
+    public function guestDestroy($id) {
+        DB::table('guests')->delete($id);
+        return redirect()->back();
+    }
+
 
     public function destroy($id) {
     	DB::table('users')->delete($id);
