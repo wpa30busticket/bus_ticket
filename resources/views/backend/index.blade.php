@@ -40,7 +40,7 @@
           <!-- small box -->
           <div class="small-box bg-green">
             <div class="inner">
-              <h3>53<sup style="font-size: 20px">%</sup></h3>
+              <h3>{{$reg->count()}}</h3>
 
               <p>Guest</p>
             </div>
