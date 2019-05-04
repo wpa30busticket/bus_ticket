@@ -1,12 +1,11 @@
 <?php
 
 namespace App\Http\Controllers;
-use App\Route;
+
 use Illuminate\Http\Request;
 use DB;
-class RouteController extends Controller
+class TownshipController extends Controller
 {
-
     public function __construct() {
         $this->middleware('backend');
     }
@@ -17,8 +16,8 @@ class RouteController extends Controller
      */
     public function index()
     {
-        $routes = DB::table('routes')->get();
-        return view('backend.route.index', compact("routes"));
+        $townships = DB::table('townships')->get();
+        return view('backend.townships.index', compact("townships"));
     }
 
     /**
@@ -28,9 +27,7 @@ class RouteController extends Controller
      */
     public function create()
     {
-        $townships = DB::table('townships')->get();
-        $buses = DB::table('buses')->get();
-        return view('backend.route.create', compact("townships", "buses"));
+        return view('backend.townships.create');
     }
 
     /**
@@ -41,14 +38,11 @@ class RouteController extends Controller
      */
     public function store(Request $request)
     {
-        $route = $request->validate([
-            'from'=> 'required',
-            'to'=> 'required',
-            'bus_id'=> 'required',
+        $township = $request->validate([
+            'name' => 'required|max:255',
         ]);
-        Route::create($route);
-        return redirect()->route('route.index');
-
+        \App\Township::create($township);
+        return redirect()->route('townships.index');
     }
 
     /**
@@ -70,8 +64,8 @@ class RouteController extends Controller
      */
     public function edit($id)
     {
-        $route =  \App\Route::find($id);
-        return view('backend.route.edit', compact("route"));
+        $township = \App\Township::find($id);
+        return view('backend.townships.edit', compact("township"));
     }
 
     /**
@@ -84,13 +78,11 @@ class RouteController extends Controller
     public function update(Request $request, $id)
     {
         $request->validate([
-        'bus_id'=> 'required',
-        'from'=> 'required',
-        'to'=> 'required',
+        'name'=> 'required',
     ]);
-      $route = \App\Route::find($id);
-      $route->update($request->except("_token"));
-      return redirect()->route('route.index');
+      $townships = \App\Township::find($id);
+      $townships->update($request->except("_token"));
+      return redirect()->route('townships.index');
     }
 
     /**
@@ -101,7 +93,7 @@ class RouteController extends Controller
      */
     public function destroy($id)
     {
-        DB::table('routes')->delete($id);
+        DB::table('townships')->delete($id);
         return redirect()->back();
     }
 }

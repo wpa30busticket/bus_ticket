@@ -54,7 +54,7 @@
           </a>
           <ul class="treeview-menu">
             <li><a href="{{ route('registered.users') }}"><i class="fa fa-circle-o"></i> Registered User</a></li>
-            <li><a href="#"><i class="fa fa-circle-o"></i> Guest</a></li>
+            <li><a href="{{ route('guest.users') }}"><i class="fa fa-circle-o"></i> Guest</a></li>
           </ul>
         </li>
 
@@ -92,8 +92,8 @@
             </span>
           </a>
           <ul class="treeview-menu">
-            <li><a href="{{ route('registered.users') }}"><i class="fa fa-circle-o"></i> Add new townships</a></li>
-            <li><a href="#"><i class="fa fa-circle-o"></i> Township list</a></li>
+            <li><a href="{{ route('townships.create') }}"><i class="fa fa-circle-o"></i> Add new townships</a></li>
+            <li><a href="{{ route('townships.index') }}"><i class="fa fa-circle-o"></i> Township list</a></li>
           </ul>
         </li>
 

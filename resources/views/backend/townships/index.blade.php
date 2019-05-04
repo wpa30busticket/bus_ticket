@@ -1,5 +1,5 @@
 @extends('layouts/admin_layout')
-@section('title', 'Dashboard | Bus list')
+@section('title', 'Dashboard | Townships list')
 @section('content')
 
 
@@ -8,7 +8,7 @@
 <div class="content-wrapper">
 	<!-- Content Header (Page header) -->
 	<section class="content-header">
-		<h1> Route list</h1>
+		<h1> Townships list</h1>
 		<ol class="breadcrumb">
 			<li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
 			<li class="active">Dashboard</li>
@@ -22,33 +22,32 @@
 						<tr>
 							<th scope="col">#</th>
 							<th scope="col">Name</th>
-							<th scope="col">Type</th>
-							<th scope="col">Bus number</th>
-							<th scope="col">Delete</th>						
-							<th scope="col">Edit</th>						
+							<th scope="col">Created_at</th>					
+							<th scope="col">Delete</th>					
+							<th scope="col">Edit</th>					
 						</tr>
 					</thead>
 					<tbody>
-						@foreach($buses as $bus)
+						@foreach($townships as $township)
 						<tr> 
-							<th scope="row">{{ $bus->id }}</th>
-							<td>{{ $bus->name }}</td>
-							<td>{{ $bus->type }}</td>
-							<td>{{ $bus->bus_no }}</td>
+							<th scope="row">{{ $township->id }}</th>
+							<td>{{ $township->name }}</td>
+							<td>{{ $township->created_at }}</td>
 							<td>
-								<form action="{{ route('buslist.destroy', $bus->id) }}" method="POST">
+								<form action="{{ route('townships.destroy', $township->id) }}" method="POST">
 									@csrf
 									@method('delete')
-									<button type="submit" class="btn btn-danger">delete</button> 
+									<button type="submit" class="btn btn-danger">delete</button>
 								</form>
 							</td>
 							<td>
-							<form action="{{ route('buslist.edit', $bus->id) }}" method="POST">
+								<form action="{{ route('townships.edit', $township->id) }}" method="POST">
 									@csrf
-									@method('patch')
-									<button type="submit" class="btn btn-success">edit</button> 
+									@method('PATCH')
+									<button type="submit" class="btn btn-success">edit</button>
 								</form>
 							</td>
+						</tr>
 						@endforeach
 					</tbody>
 				</table>
@@ -60,4 +59,5 @@
 </div>
 <!-- /.content-wrapper -->
 @include('layouts.footer')
+
   @endsection

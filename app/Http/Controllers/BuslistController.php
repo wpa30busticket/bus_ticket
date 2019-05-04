@@ -39,14 +39,14 @@ class BuslistController extends Controller
      */
     public function store(Request $request)
     {
-        $buslist = $request->validate([
+        // return($request);
+        $bus = $request->validate([
             'name'=> 'required',
             'type'=> 'required',
-            'number'=> 'required',
+            'bus_no'=> 'required',
         ]);
-        Buslist::create($buslist);
-        return('ok');
-
+        \App\Bus::create($bus);
+        return redirect()->route('buslist.index');
     }
 
     /**
@@ -68,8 +68,9 @@ class BuslistController extends Controller
      */
     public function edit($id)
     {
-        //
-    }
+        $bus = \App\Bus::find($id);
+        return view("backend.buslist.edit", compact("bus"));
+    } 
 
     /**
      * Update the specified resource in storage.
@@ -80,8 +81,15 @@ class BuslistController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
-    }
+      $request->validate([
+        'name'=> 'required',
+        'type'=> 'required',
+        'bus_no'=> 'required',
+    ]);
+      $bus = \App\Bus::find($id);
+      $bus->update($request->except("_token"));
+      return redirect()->route('buslist.index');
+  }
 
     /**
      * Remove the specified resource from storage.

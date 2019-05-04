@@ -1,5 +1,5 @@
 @extends('layouts/admin_layout')
-@section('title', 'Dashboard | Add bus')
+@section('title', 'Dashboard | Add new townships')
 @section('content')
 
 
@@ -9,7 +9,7 @@
 	<!-- Content Header (Page header) -->
 	<section class="content-header">
 		<h1>
-			Add a new bus
+			Add a new township
 		</h1>
 		<ol class="breadcrumb">
 			<li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
@@ -18,21 +18,11 @@
 	</section> <!-- Main content -->
 
 	<section class="content">
-		<form method="POST" action="{{ route('buslist.store') }}">
+		<form method="POST" action="{{ route('townships.store') }}">
 			@csrf
 			<div class="form-group">
-				<label for="name">Bus name</label>
+				<label for="name">Name</label>
 				<input type="text" class="form-control" id="name" placeholder="Enter bus name" name="name">
-			</div>
-			
-			<div class="form-group">
-				<label for="type">Type</label>
-				<input type="text" class="form-control" id="type" placeholder="Enter Type" name="type">
-			</div>
-
-			<div class="form-group">
-				<label for="number">Bus number</label>
-				<input type="text" class="form-control" id="number" placeholder="Enter bus number" name="bus_no">
 			</div>
 
 			<button type="submit" class="btn btn-primary">Submit</button>
@@ -41,4 +31,5 @@
 	</div>
 	<!-- /.content-wrapper -->
 	@include('layouts.footer')
+
   @endsection
