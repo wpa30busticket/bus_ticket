@@ -12,7 +12,13 @@ class DashController extends Controller
 
     public function login() {
     	$users = DB::table('users')->get();
-    	return view('backend.index', compact("users"));
+        // $reg = \App\Guest::count();
+        $reg = DB::table('guests')->get();
+    	return view('backend.index', compact("users",'reg'));
+    }
+
+    public function calendar() {
+        return view('layouts.calendar');
     }
 
     public function index() {
@@ -21,8 +27,9 @@ class DashController extends Controller
     }
 
     public function guest() {
-        $guests = DB::table('guests')->get();
-        return view('backend.guest', compact("guests"));
+        $search = request('search');
+        $guests = DB::table('guests')->where('name','like', '%'.$search.'%')->paginate(10);
+        return view('backend.guest', compact("guests",'search'));
     }
 
     public function guestDestroy($id) {

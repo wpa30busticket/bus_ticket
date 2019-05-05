@@ -26,8 +26,8 @@
       <!-- sidebar menu: : style can be found in sidebar.less -->
       <ul class="sidebar-menu" data-widget="tree">
         <li class="header">MAIN NAVIGATION</li>
-        <li class="active treeview">
-          <a href="#">
+        <li class="treeview">
+          <a href="{{ route('dashboard.index') }}">
             <i class="fa fa-dashboard"></i> <span>Dashboard</span>
           </a>   
         </li>
@@ -54,11 +54,52 @@
           </a>
           <ul class="treeview-menu">
             <li><a href="{{ route('registered.users') }}"><i class="fa fa-circle-o"></i> Registered User</a></li>
-            <li><a href="#"><i class="fa fa-circle-o"></i> Guest</a></li>
+            <li><a href="{{ route('guest.users') }}"><i class="fa fa-circle-o"></i> Guest</a></li>
           </ul>
         </li>
+
+         <li class="treeview">
+          <a href="#">
+            <i class="fa fa-user"></i> <span>Routes</span>
+            <span class="pull-right-container">
+              <i class="fa fa-angle-left pull-right"></i>
+            </span>
+          </a>
+          <ul class="treeview-menu">
+            <li><a href="{{ route('route.create') }}"><i class="fa fa-circle-o"></i> Add new route</a></li>
+            <li><a href="{{ route('route.index') }}"><i class="fa fa-circle-o"></i> Route list </a></li>
+          </ul>
+        </li>
+
+         <li class="treeview">
+          <a href="#">
+            <i class="fa fa-user"></i> <span>Bus</span>
+            <span class="pull-right-container">
+              <i class="fa fa-angle-left pull-right"></i>
+            </span>
+          </a>
+          <ul class="treeview-menu">
+            <li><a href="{{ route('buslist.create') }}"><i class="fa fa-circle-o"></i> Add new bus</a></li>
+            <li><a href="{{ route('buslist.index') }}"><i class="fa fa-circle-o"></i> Bus list</a></li>
+          </ul>
+        </li>
+
+         <li class="treeview">
+          <a href="#">
+            <i class="fa fa-user"></i> <span>Townships</span>
+            <span class="pull-right-container">
+              <i class="fa fa-angle-left pull-right"></i>
+            </span>
+          </a>
+          <ul class="treeview-menu">
+            <li><a href="{{ route('townships.create') }}"><i class="fa fa-circle-o"></i> Add new townships</a></li>
+            <li><a href="{{ route('townships.index') }}"><i class="fa fa-circle-o"></i> Township list</a></li>
+          </ul>
+        </li>
+
+
         <li>
-          <a href="pages/calendar.html">
+          <a href="{{ route('dashboard.calendar') }}">
             <i class="fa fa-calendar"></i> <span>Calendar</span>
           </a>
         </li>

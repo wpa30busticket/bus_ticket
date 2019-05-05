@@ -1,5 +1,5 @@
 @extends('layouts/admin_layout')
-@section('title', 'Dashboard | Guest Users')
+@section('title', 'Dashboard | Registered Users')
 @section('content')
 
 
@@ -17,43 +17,29 @@
         </ol>
       </section> <!-- Main content -->
       
-      
       <section class="content">
-        <div class="box-hearder">
-          <form action="{{route('guest.users')}}" method="post">
-        <div class="form-group">
-        <input type="text" name="search">
-      </div>
-      </form>
-        </div>
         
-        <div class="box">
-          <div class="box-body">
-            <table class="table table-bordered table-striped">
+        <table class="table table-striped">
           <thead>
             <tr>
               <th scope="col">#</th>
               <th scope="col">Name</th>
               <th scope="col">Email</th>
-              <th scope="col">Phone</th>
               <th scope="col">Address</th>
-              <th scope="col">NRC</th>
               <th scope="col">Created_at</th>
               <th scope="col">Action</th>
             </tr>
           </thead>
           <tbody>
-            @foreach($guests as $guest)
+            @foreach($users as $user)
             <tr>
-              <th scope="row">{{ $guest->id }}</th>
-              <td>{{ $guest->name }}</td>
-              <td>{{ $guest->email }}</td>
-              <td>{{ $guest->phone }}</td>
-              <td>{{ $guest->address }}</td>
-              <td>{{ $guest->nrc }}</td>
-              <td>{{ $guest->created_at }}</td>
+              <th scope="row">{{ $user->id }}</th>
+              <td>{{ $user->name }}</td>
+              <td>{{ $user->email }}</td>
+              <td>{{ $user->address }}</td>
+              <td>{{ $user->created_at }}</td>
               <td>
-                <form action="{{ route('guest_users.destroy', $guest->id) }}" method="POST">
+                <form action="{{ route('registered_users.destroy', $user->id) }}" method="POST">
                   @csrf
                   @method('delete')
                   <button type="submit" class="btn btn-danger">delete</button>
@@ -63,9 +49,6 @@
             @endforeach
           </tbody>
         </table>
-        {{ $guests->appends(['search' => $search]) }}
-          </div>
-        </div>
 
       </section>
       <!-- /.content -->
@@ -267,8 +250,6 @@
    immediately after the control sidebar -->
    <div class="control-sidebar-bg"></div>
  </div>
- 
-
  <!-- ./wrapper -->
 
  @endsection
