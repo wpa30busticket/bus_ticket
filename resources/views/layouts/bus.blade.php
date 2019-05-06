@@ -11,7 +11,26 @@
 	<link rel="stylesheet" href="{{ asset('css/app.css') }}">
 	<link rel="stylesheet" href="{{ asset('css/style3.css') }}">
 	<link rel="stylesheet" href="{{ asset('bower_components/select2/dist/css/select2.min.css') }}">
+	<link rel="stylesheet" href="{{ asset('bower_components/bootstrap/dist/css/bootstrap.min.css') }}">
+
+	<link rel="stylesheet" href="https://cdn.rawgit.com/Eonasdan/bootstrap-datetimepicker/e8bddc60e73c1ec2475f827be36e1957af72e2ea/build/css/bootstrap-datetimepicker.css">
+
 	<link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+
+	 
+        
+       
+        
+        
+
+		
+        
+        
+        
+        
+        
+        
+
 	{{-- <link rel="stylesheet" href="https://resources/demos/style.css"> --}}
 
 </head>
@@ -88,8 +107,9 @@
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
 		<script src="{{ asset('bower_components/bootstrap/dist/js/bootstrap.min.js') }}"></script>
 		<script src="{{ asset('css/app.js') }}"></script>
-		<script src="{{ asset('bootstrap-datepicker/dist/js/bootstrap-datepicker.js') }}"></script>
+		<script src="{{ asset('bower_components/bootstrap-datepicker/dist/js/bootstrap-datepicker.js') }}"></script>
 		<script src="{{ asset('bower_components/select2/dist/js/select2.js') }}"></script>
+		<script src="https://cdn.rawgit.com/Eonasdan/bootstrap-datetimepicker/e8bddc60e73c1ec2475f827be36e1957af72e2ea/src/js/bootstrap-datetimepicker.js"></script>
 		<script>
 			$(function() {
 				$('#datepicker').datepicker();
