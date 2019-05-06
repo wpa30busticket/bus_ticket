@@ -33,10 +33,10 @@
 						@foreach($routes as $route)
 						<tr>
 							<th scope="row">{{ $route->id }}</th>
-							<td>{{ $route->bus_id }}</td>
-							<td>{{ $route->from }}</td>
-							<td>{{ $route->to }}</td>
-							<td>{{ $route->created_at }}</td>
+							<td>{{ optional($route->bus)->name }}</td>
+							<td>{{ $route->fromTownship->name }}</td>
+							<td>{{ $route->toTownship->name }}</td>
+							<td>{{ $route->created_at->toDateString() }}</td>
 							<td>
 								<form action="{{ route('route.destroy', $route->id) }}" method="POST">
 									@csrf
@@ -45,11 +45,7 @@
 								</form>
 							</td>
 							<td>
-								<form action="{{ route('route.edit', $route->id) }}" method="POST">
-									@csrf
-									@method('patch')
-									<button type="submit" class="btn btn-success">edit</button>
-								</form>
+								<a href="{{route('route.edit',$route->id)}}" class="btn btn-info">Edit</a>
 							</td>
 						</tr>
 						@endforeach

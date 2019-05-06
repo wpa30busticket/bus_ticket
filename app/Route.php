@@ -12,4 +12,19 @@ class Route extends Model
     {
     	return $this->hasMany(TicketBooking::class,'route_id');
     }
+
+    public function bus()
+    {
+    	return $this->belongsTo(Bus::class);
+    }
+
+
+    public function fromTownship()
+    {
+    	return $this->belongsTo(Township::class,'from','id');
+    }
+    public function toTownship()
+    {
+    	return $this->belongsTo(Township::class,'to','id');
+    }
 }

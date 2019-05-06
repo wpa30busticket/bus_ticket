@@ -46,9 +46,9 @@ Route::group(['prefix' => 'dashboard',], function( ) {
 	Route::get('/add-route', 'RouteController@create')->name('route.create');
 	Route::post('/add-route-store', 'RouteController@store')->name('route.store');
 	Route::get('/route-list', 'RouteController@index')->name('route.index');
+	Route::get('/route-list/{id}/edit', 'RouteController@edit')->name('route.edit');
+	Route::patch('/route-list/{id}/update', 'RouteController@update')->name('route.update');
 	Route::delete('/route-list/{id}/delete', 'RouteController@destroy')->name('route.destroy');
-	Route::patch('/route-list/{id}/edit', 'RouteController@edit')->name('route.edit');
-	Route::post('/route-list/{id}/update', 'RouteController@update')->name('route.update');
 
 	//backend sidebar //add new bus and list
 	Route::get('/bus-list', 'BuslistController@index')->name('buslist.index');
@@ -65,5 +65,6 @@ Route::group(['prefix' => 'dashboard',], function( ) {
 	Route::post('/townships/create', 'TownshipController@store')->name('townships.store');
 	Route::patch('/townships/{id}/edit', 'TownshipController@edit')->name('townships.edit');
 	Route::post('/townships/{id}/update', 'TownshipController@update')->name('townships.update');
+	Route::resource('busss','BuslistController');
 });
 Auth::routes();

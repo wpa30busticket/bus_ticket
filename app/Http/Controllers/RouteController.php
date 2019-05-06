@@ -17,7 +17,8 @@ class RouteController extends Controller
      */
     public function index()
     {
-        $routes = DB::table('routes')->get();
+        // $routes = DB::table('routes')->leftJoin('buses')->get();
+        $routes = Route::get();
         return view('backend.route.index', compact("routes"));
     }
 
@@ -71,7 +72,9 @@ class RouteController extends Controller
     public function edit($id)
     {
         $route =  \App\Route::find($id);
-        return view('backend.route.edit', compact("route"));
+        $townships = DB::table('townships')->get();
+        $buses = DB::table('buses')->get();
+        return view('backend.route.edit', compact("route","townships",'buses'));
     }
 
     /**

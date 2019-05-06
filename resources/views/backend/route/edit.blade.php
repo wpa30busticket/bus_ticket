@@ -20,10 +20,47 @@
 	<section class="content">
 		<form method="POST" action="{{ route('route.update', $route->id) }}">
 			@csrf
+			@method("PATCH")
+
 
 			<div class="form-group">
+				<label for="exampleInputEmail1">From</label>
+				<select id="from" name="from" class="form-control chosen select2">
+					<option value="">Select a location</option>
+					@foreach($townships as $township)
+					<option class="text-my"  value="{{$township->id}}" {{ ($route->from == $township->id)? 'selected' : '' }}>
+						{{$township->name}}
+					</option>
+					@endforeach
+				</select>
+			</div>
+
+			<div class="form-group">
+				<label for="exampleInputEmail1">To</label>
+				<select id="from" name="to" class="form-control chosen select2">
+					<option value="">Select a bus</option>
+					@foreach($townships as $township)
+					<option class="text-my"  value="{{$township->id}}" {{ ($route->to == $township->id)? 'selected' : '' }}>
+						{{$township->name}}
+					</option>
+					@endforeach
+				</select>
+			</div>
+			<div class="form-group">
+				<label for="exampleInputEmail1">Bus id</label>
+				<select id="from" name="bus_id" class="form-control chosen select2">
+					<option value="">Select a bus</option>
+					@foreach($buses as $bus)
+					<option class="text-my"  value="{{$bus->id}}" {{ ($route->bus_id == $bus->id)? 'selected' : '' }}>
+						{{$bus->name}}
+					</option>
+					@endforeach
+				</select>
+			</div>
+
+			<!-- <div class="form-group">
 				<label for="name">Bus ID</label>
-				<input type="text" class="form-control" value="{{ $route->bus_id }}" id="name" placeholder="From" name="bus_id" autofocus="" required="">
+				<input type="text" class="form-control" value="{{ $route->bus_id }}" id="name" placeholder="From" name="bus_id" autofocus="">
 			</div>
 			
 			<div class="form-group">
@@ -34,7 +71,7 @@
 			<div class="form-group">
 				<label for="number">To</label>
 				<input type="text" class="form-control" value="{{ $route->to }}" id="number" placeholder="to" name="to" required="">
-			</div>
+			</div> -->
 
 			<button type="submit" class="btn btn-primary">Submit</button>
 		</form>       
