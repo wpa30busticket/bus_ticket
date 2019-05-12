@@ -20,6 +20,7 @@ class RouteController extends Controller
         // $routes = DB::table('routes')->leftJoin('buses')->get();
         $routes = Route::get();
         return view('backend.route.index', compact("routes"));
+
     }
 
     /**

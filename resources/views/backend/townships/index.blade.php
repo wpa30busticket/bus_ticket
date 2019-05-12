@@ -32,7 +32,7 @@
 						<tr> 
 							<th scope="row">{{ $township->id }}</th>
 							<td>{{ $township->name }}</td>
-							<td>{{ $township->created_at }}</td>
+							<td>{{ $township->created_at->toDateString() }}</td>
 							<td>
 								<form action="{{ route('townships.destroy', $township->id) }}" method="POST">
 									@csrf
@@ -41,11 +41,7 @@
 								</form>
 							</td>
 							<td>
-								<form action="{{ route('townships.edit', $township->id) }}" method="POST">
-									@csrf
-									@method('PATCH')
-									<button type="submit" class="btn btn-success">edit</button>
-								</form>
+								<a href="{{ route('townships.edit', $township->id) }}" class="btn btn-info">edit</a>
 							</td>
 						</tr>
 						@endforeach

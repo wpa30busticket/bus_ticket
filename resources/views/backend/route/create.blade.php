@@ -38,7 +38,7 @@
 				<select id="from" name="to" class="form-control chosen select2">
 					<option value="">Select a bus</option>
 					@foreach($townships as $township)
-					<option class="text-my"  value="{{$township->id}}" {{ (request('from') == $township->id)? 'selected' : '' }}>
+					<option class="text-my"  value="{{$township->id}}" {{ (request('to') == $township->id)? 'selected' : '' }}>
 						{{$township->name}}
 					</option>
 					@endforeach

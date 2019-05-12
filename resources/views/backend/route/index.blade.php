@@ -21,7 +21,8 @@
 					<thead>
 						<tr>
 							<th scope="col">#</th>
-							<th scope="col">Bus ID</th>
+							<th scope="col">Bus Name</th>
+							<th scope="col">Bus Number</th>
 							<th scope="col">From</th>
 							<th scope="col">To</th>
 							<th scope="col">Created_at</th>
@@ -33,9 +34,10 @@
 						@foreach($routes as $route)
 						<tr>
 							<th scope="row">{{ $route->id }}</th>
-							<td>{{ optional($route->bus)->name }}</td>
-							<td>{{ $route->fromTownship->name }}</td>
-							<td>{{ $route->toTownship->name }}</td>
+							<td>{{ $route->bus['name'] ?? '-'}}</td>
+							<td>{{ $route->bus['bus_no'] ?? '-'}}</td>
+							<td>{{ $route->fromTownship['name'] ?? '-' }}</td>
+							<td>{{ $route->toTownship['name'] ?? '-' }} </td>
 							<td>{{ $route->created_at->toDateString() }}</td>
 							<td>
 								<form action="{{ route('route.destroy', $route->id) }}" method="POST">

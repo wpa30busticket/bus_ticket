@@ -24,6 +24,8 @@
     Route::get('/seats/guest', 'BusController@guest')->name('guest.login');
     Route::post('/seats/guest', 'BusController@store')->name('guest.store');
     Route::get('/seats/payment', 'BusController@payment')->name('seats.payment');
+    Route::get('/payment', 'PaymentController@index')->name('bus.payment');
+    Route::post('/pay', 'VoucherController@index')->name('voucher.index');
 // Route::resource('users','Admin\UserController',['as' => 'admin']);
 
 //backend login
@@ -55,7 +57,7 @@ Route::group(['prefix' => 'dashboard',], function( ) {
 	Route::delete('/bus-list/{id}/delete', 'BuslistController@destroy')->name('buslist.destroy');
 	Route::get('/add-bus/create', 'BuslistController@create')->name('buslist.create');
 	Route::post('/add-bus-store', 'BuslistController@store')->name('buslist.store');
-	Route::patch('/bus-list/{id}/edit', 'BuslistController@edit')->name('buslist.edit');
+	Route::get('/bus-list/{id}/edit', 'BuslistController@edit')->name('buslist.edit');
 	Route::post('/bus-list/{id}/update', 'BuslistController@update')->name('buslist.update');
 
 	//backend sidebar //add new townships and list
@@ -63,8 +65,8 @@ Route::group(['prefix' => 'dashboard',], function( ) {
 	Route::delete('/townships/{id}/delete', 'TownshipController@destroy')->name('townships.destroy');
 	Route::get('/townships/create', 'TownshipController@create')->name('townships.create');
 	Route::post('/townships/create', 'TownshipController@store')->name('townships.store');
-	Route::patch('/townships/{id}/edit', 'TownshipController@edit')->name('townships.edit');
+	Route::get('/townships/{id}/edit', 'TownshipController@edit')->name('townships.edit');
 	Route::post('/townships/{id}/update', 'TownshipController@update')->name('townships.update');
-	Route::resource('busss','BuslistController');
 });
+
 Auth::routes();
