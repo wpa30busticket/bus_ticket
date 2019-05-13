@@ -32,7 +32,7 @@
 						<tr> 
 							<th scope="row">{{ $township->id }}</th>
 							<td>{{ $township->name }}</td>
-							<td>{{ $township->created_at->toDateString() }}</td>
+							<td>{{ $township->created_at }}</td>
 							<td>
 								<form action="{{ route('townships.destroy', $township->id) }}" method="POST">
 									@csrf

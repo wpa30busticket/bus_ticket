@@ -11,7 +11,7 @@
       <div class="col-xs-12">
         <h2 class="page-header">
           <i class="fa fa-globe"></i> Mingalar Bus Ticket Service
-          <small class="pull-right">Date: 2/10/2014</small>
+          <small class="pull-right"><b>{{ date('d-m-Y') }}</b></small>
         </h2>
       </div>
       <!-- /.col -->
@@ -32,11 +32,10 @@
       <div class="col-sm-4 invoice-col">
         To
         <address>
-          <strong>John Doe</strong><br>
-          795 Folsom Ave, Suite 600<br>
-          San Francisco, CA 94107<br>
-          Phone: (555) 539-1037<br>
-          Email: john.doe@example.com
+          <strong>{{ $data['name'] }}</strong><br>
+          {{ $data['address'] }}<br>
+          {{ $data['phone'] }}<br>
+          {{ $data['email'] }}
         </address>
       </div>
       <!-- /.col -->
@@ -115,7 +114,7 @@
         <img src="{{ asset('/dist/img/credit/paypal2.png') }}" alt="Paypal">
 
         <p class="text-muted well well-sm no-shadow" style="margin-top: 10px;">
-         	Thanks for ordering tickets from us.<b> Please bring this screenshot or printed invoice with you. </b>
+         	Thanks for ordering tickets from us.<b> <i>Please bring this screenshot or printed invoice with you when you come to the bus station. </i></b>
         </p>
       </div>
       <!-- /.col -->

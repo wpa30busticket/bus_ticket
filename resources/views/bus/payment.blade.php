@@ -17,7 +17,7 @@
                         </div>
                         <div class="form-group">
                             <label for="cc-payment" class="control-label mb-1">Payment amount</label>
-                            <input id="cc-payment" name="cc-payment" type="text" class="form-control" aria-required="true" aria-invalid="false" required value="100.00">
+                            <input id="cc-payment" name="cc-payment" type="text" class="form-control" aria-required="true" aria-invalid="false" required value="100.00" disabled="">
                             <span class="invalid-feedback">Enter the payment amount</span>
                         </div>
                         <div class="form-group has-success">

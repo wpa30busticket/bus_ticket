@@ -63,23 +63,30 @@ class BusController extends Controller
      */
     public function store(Request $request)
     {
-        $request->validate([
+
+    $data =    $request->validate([
         'name' => 'required|max:255',
         'email' => 'required|max:255',
         'phone' => 'required|max:15',
         'address' => 'required|max:255',
         'nrc' => 'required|max:255',
     ]);
+    // dd($data);
+       
         $guest =  new \App\Guest;
         $guest->name = $request->name;
         $guest->email = $request->email;
         $guest->phone = $request->phone;
         $guest->address = $request->address;
         $guest->nrc = $request->nrc;
-        
         $guest->save();
+        $request->session()->put('guest', $guest);
+        $guest = $request->session()->get('guest');    
+        // dd($guest);
 
-        return redirect()->route('bus.payment');
+        return redirect()->route('bus.payment', compact("guest"));
+
+
    }
 
     /**

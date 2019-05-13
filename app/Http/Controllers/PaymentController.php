@@ -7,6 +7,8 @@ use Illuminate\Http\Request;
 class PaymentController extends Controller
 {
     public function index() {
-    	return view('bus.payment');
+    	$guest = \Session::get('guest');
+
+    	return view('bus.payment',compact('guest'));
     }
 }

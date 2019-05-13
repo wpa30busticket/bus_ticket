@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use Carbon\Carbon;
 use Illuminate\Http\Request;
 
 class VoucherController extends Controller
@@ -13,7 +13,8 @@ class VoucherController extends Controller
      */
     public function index()
     {
-        return view('bus.voucher');
+        $data = \Session::get('guest');
+        return view('bus.voucher', compact('data'));
     }
 
     /**
