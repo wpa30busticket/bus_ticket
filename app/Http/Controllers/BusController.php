@@ -83,7 +83,7 @@ class BusController extends Controller
         $request->session()->put('guest', $guest);
         $guest = $request->session()->get('guest');    
         // dd($guest);
-
+        dd($guest['name']);    
         return redirect()->route('bus.payment', compact("guest"));
 
 
