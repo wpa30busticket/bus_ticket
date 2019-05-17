@@ -195,8 +195,8 @@
 								<img class="img-fluid" alt="Responsive image" src="img/zar.jpg" alt="" width="80%">
 								<p class="text-center">Zar Zar Aung <br>30/5/1997</p>
 								<div class="social text-center" >
-									<a href=""><i class="fa fa-twitter"></i></a>
-									<a href=""><i class="fa fa-facebook"></i></a>
+									<i class="fab fa-twitter-square"></i>
+									<a href=""><i class="fas fa-camera fa-2x"></i></a>
 									<a href=""><i class="fa fa-google-plus"></i></a>
 									<a href=""><i class="fa fa-linkedin"></i></a>
 								</div>
