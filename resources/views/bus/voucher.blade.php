@@ -32,10 +32,10 @@
       <div class="col-sm-4 invoice-col">
         To
         <address>
-          <strong>{{ $data['name'] }}</strong><br>
-          {{ $data['address'] }}<br>
-          {{ $data['phone'] }}<br>
-          {{ $data['email'] }}
+          <strong>{{ strtoupper($data['name']) }}</strong><br>
+          Address : <b>{{ $data['address'] }} </b><br>
+          Phone no : <b>{{ $data['phone'] }}</b><br>
+          Email : <b>{{ $data['email'] }}</b>
         </address>
       </div>
       <!-- /.col -->

@@ -18,6 +18,155 @@ font-family: 'Srisakdi', cursive;*/
 	margin-top: 30px;
 	padding: 50px 0px;
 }
+
+#navigation{
+	font-family: 'Maiden Orange', cursive;
+	font-size: 20px;
+	background: #F7F8FC;
+}
+
+#home{
+	background: url(../img/bu2.jpg);
+	background-size: cover;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	-ms-background-size: cover;
+	background-color: #000;
+	height: 100%;
+	width: 100%;
+	margin-top: 30px;
+	padding: 150px 0px;
+}
+#home p{
+	text-shadow: 4px 4px 4px;
+	text-align: center;
+	padding: 7em 0  8em 0;
+	color: #00B640;
+}
+#home a{
+	text-decoration: none;
+	outline: none;
+}
+a:hover{
+	background-color: #4097F7;
+}
+#route,#search{
+	padding: 30px 0;
+}
+#from-to{
+	font-size: 30px;
+	font-family: 'Courgette', cursive;
+	color: #386496;
+}
+
+/*portfolio*/
+#portfolio, #team,#route {
+  background: #f7f7f7;
+  padding: 20px 0;
+  margin-top: 20px;
+}
+#portfolio, #team h2{
+	text-decoration: underline;
+	text-decoration-color:#386496;
+	color: #386496;
+	font-family:'Baloo Bhai', cursive;
+}
+
+#portfolio #portfolio-wrapper {
+  padding: 15px 0 0 15px;
+
+}
+
+#portfolio #portfolio-flters {
+  padding: 0;
+  margin: 0 0 45px 0;
+  list-style: none;
+  text-align: center;
+}
+
+#portfolio #portfolio-flters li {
+  cursor: pointer;
+  margin: 0 10px;
+  display: inline-block;
+  padding: 10px 22px;
+  font-size: 12px;
+  line-height: 20px;
+  color: #666666;
+  border-radius: 4px;
+  text-transform: uppercase;
+  background: #fff;
+  margin-bottom: 5px;
+  transition: all 0.3s ease-in-out;
+}
+
+#portfolio #portfolio-flters li:hover, #portfolio #portfolio-flters li.filter-active {
+  background: #2dc997;
+  color: #fff;
+}
+
+#portfolio .portfolio-item {
+  position: relative;
+  height: 200px;
+  overflow: hidden !important;
+  margin-bottom: 15px;
+  transition: all 350ms ease;
+  transform: scale(1);
+  padding-top: 20px;
+}
+
+#portfolio .portfolio-item a {
+  display: block;
+  margin-right: 15px;
+}
+
+#portfolio .portfolio-item img {
+  position: relative;
+  top: 0;
+  transition: all 600ms cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+
+#portfolio .portfolio-item .details {
+  height: 50px;
+  background: #2dc997;
+  position: absolute;
+  width: 100%;
+  height: 50px;
+  bottom: -50px;
+  transition: all 300ms cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+
+#portfolio .portfolio-item .details h4 {
+  font-size: 14px;
+  font-weight: 700;
+  color: #fff;
+  padding: 8px 0 2px 8px;
+  margin: 0;
+}
+
+#portfolio .portfolio-item .details span {
+  display: block;
+  color: #fff;
+  font-size: 13px;
+  padding-left: 8px;
+}
+
+#portfolio .portfolio-item:hover .details {
+  bottom: 0;
+}
+
+#portfolio .portfolio-item:hover img {
+  top: -30px;
+}
+
+
+/*footer*/
+#foot{
+	background-color:#1E606E;
+	font-family: 'Courgette', cursive;
+	margin: 30px 0;
+	padding: 10px 20px;
+}
 #cover p{
 	text-shadow: 4px 4px 4px #fff;
 }
@@ -31,18 +180,7 @@ font-family: 'Srisakdi', cursive;*/
 	text-decoration: none;
 	outline: none;
 }
-#navigation{
-	background-color: #F5F5F5;
-}
-#navi{
-	margin-top: 20px;
-}
-#navigation li{
-	padding-left: 5px;
-}
-#navigation li a{
-	color: #3b5998;
-}
+
 #popular-route{
 	background: #E8E8E8;
 	padding-top: 30px;
@@ -180,30 +318,7 @@ img{
 	font-family: 'Abril Fatface', cursive;
 	font-size: 3em;
 }
-#foot{
-	background-color: #0F1016;
-	font-family:'Source Serif Pro', serif;
-	font-color: white;
-	margin: 30px 0;
-	padding: 10px 20px;
-}
-#foot h3{
-	font-family:  'Abril Fatface', cursive;
-	color: #3b5998;
-	padding: 10px 0; 
 
-}
-#about, #about a{
-	color: #fff;
-}
-#foot-nav{
-	padding-left: 20px;
-	color: #000;
-	padding: 10px 10px;
-	outline: none;
-	text-decoration: none;
-	font-size: 20px;
-}
 
 /*route.html*/
 
