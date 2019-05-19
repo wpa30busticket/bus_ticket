@@ -1,6 +1,7 @@
 @extends('layouts/bus')
 @section('title', 'Bus Online Booking')
 @section('content')
+<<<<<<< HEAD
 <div class="container" id="cover">
 	<div class="row">				
 	</div>
@@ -33,23 +34,58 @@
 								@endforeach
 			</select><br><br>
 			<button class="btn btn-success">Submit</button>
+=======
+<div class="container">
+		<div id="home">
+			<a href="#"><h1 class="text-center text-uppercase"> Myanmar Bus Online Booking</h1></a>
+>>>>>>> a0aa237d837f2d7c01e923235d13f0cbe731bdf7
 		</div>
-	</form>
+</div>
+	<!-- end of cover -->
+
+	<div class="container">
+		<div class="row" id="route">
+			<div class="col-lg-8 col-md-8 col-sm-8">
+				<form action="#" method="get">
+					<label class="text-my" id="from-to">Leaving From</label>
+					<select id="from" name="route[]" class="form-control chosen select2">
+						<option value="">Select a location</option>
+						@foreach($townships as $township)
+						<option class="text-my" value="{{$township->id}}" {{ (request('from') == $township->id)? 'selected' : '' }}>
+							{{$township->name}}
+						</option>
+						@endforeach
+					</select>
+					<label class="text-my" id="from-to">Going To</label>
+					<select id="to" name="route[]" class="form-control chosen select2">
+						<option value="">Select a location</option>
+						@foreach($townships as $township)
+						<option class="text-my"  value="{{$township->id}}" {{ (request('to') == $township->id)? 'selected' : '' }}>
+							{{$township->name}}
+						</option>
+						@endforeach
+					</select>
+					<div class="row" id="search">
+
+						<div class="col-md-12 text-center">
+							<button class="btn btn-success">Search</button>
+						</div>
+					</div>
+				</form>
 
 			</div>
 			<div class="col-md-4 text-center" id="one">
 				<img src="img/telenor.jpg" alt="">
 			</div>
 		</div>
-	</div>
-</div>
-<div class="container">
+		<!-- end of route -->
+<div class="container"> 
 			<section id="portfolio">
 				<h2 class="section-title text-center text-uppercase">Our Partners</h2>
 				<div class="row" id="portfolio-wrapper">
 					<div class="col-lg-2 col-md-6 portfolio-item filter-app">
 						<a href="">
-							<img src="img/kbz.jpeg" alt="">
+							<img src="img/partner.jpg" alt="">
 							<div class="details">
 								<span>Thank for your payment</span>
 							</div>
@@ -69,7 +105,7 @@
 							<a href="">
 								<img src="img/telenor.jpg" alt="">
 								<div class="details">
-									<span>Thank</span>
+									<span>Thank for your payment</span>
 								</div>
 							</a>
 						</div>
@@ -88,7 +124,7 @@
 							<img src="img/telenor.jpg" alt="">
 							<div class="details">
 								<span>Thank for your payment</span>
-							</div>>
+							</div> 
 						</a>
 					</div>
 
@@ -156,8 +192,9 @@
 						</div>
 					</div>
 					
-				</section>
-			</div>
+				</div>
+			</section>
+		</div>     
 			<!-- end of partners -->
 
 
@@ -166,41 +203,42 @@
 				<section id="team">
 					<h2 class="section-title text-center text-uppercase"> Our Team</h2>
 					<div class="row">
-						<div class="col-md-4">
-							<div class="member">
+						<div class="col-md-4 our-team">
+							<div class="pic">
 								<img class="img-fluid" alt="Responsive image" src="img/Htoo.jpg" alt="" width="100%">
-								<p class="text-center">Thaw Zin Htoo <br>03/10/1997</p>
-								<div class="social text-center">
-									<a href=""><i class="fa fa-twitter"></i></a>
-									<a href=""><i class="fa fa-facebook"></i></a>
-									<a href=""><i class="fa fa-google-plus"></i></a>
-									<a href=""><i class="fa fa-linkedin"></i></a>
-								</div>
+								<ul class="social">
+			                        <li><a href="#" class="fab fa-facebook"></a></li>
+			                        <li><a href="#" class="fab fa-twitter"></a></li>
+			                        <li><a href="#" class="fab fa-google-plus"></a></li>
+			                        <li><a href="#" class="fab fa-linkedin"></a></li>
+                    			</ul>
 							</div>
+							<h5 class="text-center">Thaw Zin Htoo</h5>
 						</div>
-						<div class="col-md-4">
-							<div class="member">
+						<div class="col-md-4 our-team">
+							<div class="pic">
 								<img class="img-fluid" alt="Responsive image" src="img/Min.jpg" alt="" width="80%">
-								<p class="text-center">Min Thu <br>25/05/1990</p>
-								<div class="social text-center">
-									<a href=""><i class="fa fa-twitter"></i></a>
-									<a href=""><i class="fa fa-facebook"></i></a>
-									<a href=""><i class="fa fa-google-plus"></i></a>
-									<a href=""><i class="fa fa-linkedin"></i></a>
-								</div>
+								<ul class="social">
+			                        <li><a href="#" class="fab fa-facebook"></a></li>
+			                        <li><a href="#" class="fab fa-twitter"></a></li>
+			                        <li><a href="#" class="fab fa-google-plus"></a></li>
+			                        <li><a href="#" class="fab fa-linkedin"></a></li>
+                    			</ul>
 							</div>
+							<h5 class="text-center">Min Thu</h5>
 						</div>
-						<div class="col-md-4">
-							<div class="member">
+						<div class="col-md-4 our-team">
+							<div class="pic">
 								<img class="img-fluid" alt="Responsive image" src="img/zar.jpg" alt="" width="80%">
-								<p class="text-center">Zar Zar Aung <br>30/5/1997</p>
-								<div class="social text-center" >
-									<i class="fab fa-twitter-square"></i>
-									<a href=""><i class="fas fa-camera fa-2x"></i></a>
-									<a href=""><i class="fa fa-google-plus"></i></a>
-									<a href=""><i class="fa fa-linkedin"></i></a>
-								</div>
+								<ul class="social">
+			                        <li><a href="#" class="fab fa-facebook"></a></li>
+			                        <li><a href="#" class="fab fa-twitter"></a></li>
+			                        <li><a href="#" class="fab fa-google-plus"></a></li>
+			                        <li><a href="#" class="fab fa-linkedin"></a></li>
+                    			</ul>
 							</div>
+							<h5 class="text-center"> Zar Zar Aung</h5>
+
 						</div>
 					</div>
 				</section>

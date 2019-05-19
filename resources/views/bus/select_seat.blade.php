@@ -1,6 +1,26 @@
 @extends('layouts/bus')
 @section('title', 'Bus Ticket')
 @section('content')
+<<<<<<< HEAD
+	<div class="search-box">
+		<div class="container" id="header">
+			<form>
+			  <div class="form-group row">
+			    <label for="from" class="col-sm-2 col-form-label" id="from-to">Leaving From</label>
+			    <div class="col-sm-4">
+			      <select class="form-control text-my" name="sourceId" id="sourceId" tabindex="-1">
+						<option class="text-my" value="">--- Select ---</option>
+
+						<option class="text-my" value="39 Phayagyi">
+
+							39 Phayagyi
+
+						</option>					
+
+						<option class="text-my" value="Tike Chaung">
+
+							Tike Chaung
+=======
 <div class="search-box"  id="header">
 	<div class="container">
 		<div class="row"  id="page1">
@@ -1862,33 +1882,73 @@
 					<option class="text-my" value="Tha Phay Wa">
 
 						Tha Phay Wa
+>>>>>>> 99b9d00d81e476d0ddc17c08f22feee6ec2034c4
 
 					</option>
 
+<<<<<<< HEAD
+						<option class="text-my" value="Tilin">
+
+							Tilin
+=======
 					<option class="text-my" value="Thanbyuzayat">
 
 						Thanbyuzayat
+>>>>>>> 99b9d00d81e476d0ddc17c08f22feee6ec2034c4
 
 					</option>
 
+<<<<<<< HEAD
+						<option class="text-my" value="Toungup">
+
+							Toungup
+=======
 					<option class="text-my" value="Thandwe">
 
 						Thandwe
+>>>>>>> 99b9d00d81e476d0ddc17c08f22feee6ec2034c4
 
 					</option>
 
+<<<<<<< HEAD
+						<option class="text-my" value="Wathtikan">
+
+							Wathtikan
+=======
 					<option class="text-my" value="Thaton">
 
 						Thaton
+>>>>>>> 99b9d00d81e476d0ddc17c08f22feee6ec2034c4
 
 					</option>
 
+<<<<<<< HEAD
+						<option class="text-my" value="Waw">
+
+							Waw
+=======
 					<option class="text-my" value="Thazi">
 
 						Thazi
+>>>>>>> 99b9d00d81e476d0ddc17c08f22feee6ec2034c4
 
 					</option>
 
+<<<<<<< HEAD
+						
+					</select>
+			</div>
+			    <label for="to" class="col-sm-2 col-form-label" id="from-to">Going To</label>
+			    <div class="col-sm-4">
+			      <select class="form-control text-my" name="sourceId" id="sourceId" tabindex="-1">
+						<option class="text-my" value="">--- Select ---</option>
+
+						<option class="text-my" value="39 Phayagyi">
+
+							39 Phayagyi
+
+						</option>					
+=======
 					<option class="text-my" value="Tigyaing">
 
 						Tigyaing
@@ -1900,6 +1960,7 @@
 						Tigyaing
 
 					</option>
+>>>>>>> 99b9d00d81e476d0ddc17c08f22feee6ec2034c4
 
 					<option class="text-my" value="Tike Chaung">
 
@@ -1931,6 +1992,9 @@
 
 					</option>
 
+<<<<<<< HEAD
+						
+=======
 					<option class="text-my" value="Wetpoat">
 
 						Wetpoat
@@ -1987,21 +2051,12 @@
 							6
 						</option>
 
+>>>>>>> 99b9d00d81e476d0ddc17c08f22feee6ec2034c4
 					</select>
-
-					<div class="text-danger"></div>
-
-
-				</div> -->
-				<!-- <div class="col-md-2 col-xs-6 text-right">
-					<div class="hidden-md hidden-lg"><label class="text-my"></label></div>
-					<button class="tripSearchButton btn btn-custom btn-block" type="submit" data-message="Please select arrival place and departure place.">
-						<i class="fa fa-search" aria-hidden="true"></i> <span class="text-my">Search Now</span>
-					</button> -->
-				</div>
-			</div>
+			    </div>
+			  </div>
+			</form>
 		</div>
-	</div>
 	<!-- end of search box -->
 
 	<div class="time-box">
@@ -2010,22 +2065,8 @@
 				<div class="col-lg-3 col-md-3 col-sm-3" id="box1">
 					<div class="side-box">
 						<div class="Time">
-							<h3>Time</h3>
-							<input type="radio" name="time_option" class="time_option" id="time_option_any" value="" checked="">
-							<label for="time_option_am">4 Am</label>
-							<br>
-							<input type="radio" name="time_option" class="time_option" id="time_option_am" value="AM">
-							<label for="time_option_am">10 AM</label>
-							<br>
-							<input type="radio" name="time_option" class="time_option" id="time_option_pm" value="PM">
-							<label for="time_option_pm">4 PM</label>
-							<br>
-							<input type="radio" name="time_option" class="time_option" id="time_option_pm" value="PM">
-							<label for="time_option_pm">8 PM PM</label>
-							<br>
-							<input type="radio" name="time_option" class="time_option" id="time_option_pm" value="PM">
-							<label for="time_option_pm">10 PM</label>
-							<br>
+							<h3>Ads are here</h3>
+							<img src="{{ asset('img/ads.png') }}" alt="">
 						</div>
 					</div>
 				</div>

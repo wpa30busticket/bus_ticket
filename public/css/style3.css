@@ -1,11 +1,17 @@
-@import url("https://fonts.googleapis.com/css?family=Abril+Fatface|Roboto|Source+Serif+Pro|Srisakdi");
+@import url('https://fonts.googleapis.com/css?family=Anton|Baloo+Bhai|Courgette|Macondo+Swash+Caps|Maiden+Orange|Old+Standard+TT|Orbitron|Roboto|Roboto+Slab');
 
-/*font-family: 'Abril Fatface', cursive;
-font-family: 'Source Serif Pro', serif;
+
+/*font-family: 'Baloo Bhai', cursive;
+font-family: 'Maiden Orange', cursive;
 font-family: 'Roboto', sans-serif;
-font-family: 'Srisakdi', cursive;*/
+font-family: 'Anton', sans-serif;
+font-family: 'Roboto Slab', serif;
+font-family: 'Macondo Swash Caps', cursive;
+font-family: 'Orbitron', sans-serif;
+font-family: 'Courgette', cursive;
+font-family: 'Old Standard TT', serif;**/
 
-#cover{
+/*#cover{
 	background: url(../img/bu2.jpg);
 	background-size: cover;
 	-webkit-background-size: cover;
@@ -17,7 +23,7 @@ font-family: 'Srisakdi', cursive;*/
 	width: 100%;
 	margin-top: 30px;
 	padding: 50px 0px;
-}
+}*/
 
 #navigation{
 	font-family: 'Maiden Orange', cursive;
@@ -38,24 +44,24 @@ font-family: 'Srisakdi', cursive;*/
 	margin-top: 30px;
 	padding: 150px 0px;
 }
-#home p{
+/*#home p{
 	text-shadow: 4px 4px 4px;
 	text-align: center;
 	padding: 7em 0  8em 0;
 	color: #00B640;
-}
+}*/
 #home a{
 	text-decoration: none;
 	outline: none;
 }
-a:hover{
+/*a:hover{
 	background-color: #4097F7;
-}
+}*/
 #route,#search{
 	padding: 30px 0;
 }
 #from-to{
-	font-size: 30px;
+	font-size: 25px;
 	font-family: 'Courgette', cursive;
 	color: #386496;
 }
@@ -71,6 +77,7 @@ a:hover{
 	text-decoration-color:#386496;
 	color: #386496;
 	font-family:'Baloo Bhai', cursive;
+  margin-bottom: 25px;
 }
 
 #portfolio #portfolio-wrapper {
@@ -118,6 +125,7 @@ a:hover{
 #portfolio .portfolio-item a {
   display: block;
   margin-right: 15px;
+  width:100%;
 }
 
 #portfolio .portfolio-item img {
@@ -130,18 +138,10 @@ a:hover{
   height: 50px;
   background: #2dc997;
   position: absolute;
-  width: 100%;
+  width: 84%;
   height: 50px;
   bottom: -50px;
-  transition: all 300ms cubic-bezier(0.645, 0.045, 0.355, 1);
-}
-
-#portfolio .portfolio-item .details h4 {
-  font-size: 14px;
-  font-weight: 700;
-  color: #fff;
-  padding: 8px 0 2px 8px;
-  margin: 0;
+ transition: all 600ms cubic-bezier(0.645, 0.045, 0.355, 1);
 }
 
 #portfolio .portfolio-item .details span {
@@ -153,6 +153,7 @@ a:hover{
 
 #portfolio .portfolio-item:hover .details {
   bottom: 0;
+ top: 129px;
 }
 
 #portfolio .portfolio-item:hover img {
@@ -162,7 +163,7 @@ a:hover{
 
 /*footer*/
 #foot{
-	background-color:#1E606E;
+	background-color:#E4E4E4;
 	font-family: 'Courgette', cursive;
 	margin: 30px 0;
 	padding: 10px 20px;
@@ -363,17 +364,13 @@ label.text-my {
 }
 
 
-/*bus.html*/
+
 #header{ 
+  background-color: #F7F8FC;
   margin-top: 20px;
+  padding: 20px 10px;
 }
 
-/*label{
-    vertical-align: top;
-    height: 25px;
-    font-family: 'Roboto Slab', serif;
-    font-size: 20px;
-}*/
 label .text-my{
   font-size: 15px;
 }
@@ -451,4 +448,98 @@ label .text-my{
 	margin:0 15%;
 }
 
+.our-team img{
+	border-radius: 50%;
+}
 
+.our-team{
+    text-align: center;
+    margin-bottom: 100px;
+    z-index: 1;
+    position: relative;
+}
+.our-team .pic{
+    border-radius: 50%;
+    overflow: hidden;
+    position: relative;
+    margin-bottom: 20px;
+}
+.our-team .pic:after{
+    content: "";
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background: rgba(0,0,0,0.7);
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: all 0.5s ease 0s;
+}
+.our-team:hover .pic:after{ opacity: 1; }
+.our-team .pic img{
+    width:100 %;
+    height: auto;
+}
+.our-team .social{
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    opacity: 0;
+    position: absolute;
+    top: 45%;
+    left: 0;
+    z-index: 1;
+    transition: all 0.5s ease 0s;
+}
+.our-team:hover .social{ opacity: 1; }
+.our-team .social li{ display: inline-block; }
+.our-team .social li a{
+    display: block;
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    border-radius: 50%;
+    border: 1px solid #fff;
+    font-size: 15px;
+    color: #fff;
+    margin-right: 10px;
+    transition: all 0.5s ease 0s;
+}
+.our-team .social li a:hover{
+    background: #fff;
+    color: #000;
+}
+.our-team .team-content{
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    border: 2px dotted #ddd;
+    position: absolute;
+    bottom: -70px;
+    left: 0;
+    z-index: -1;
+    transition: all 0.5s ease 0s;
+}
+.our-team:hover .team-content{ border: 2px dotted #00adae; }
+.our-team .team-info{
+    width: 100%;
+    color: #464646;
+    position: absolute;
+    bottom: 12px;
+    left: 0;
+}
+.our-team .title{
+    font-size: 20px;
+    font-weight: 600;
+    color: #464646;
+    margin: 0 0 5px 0;
+    transition: all 0.5s ease 0s;
+}
+.our-team:hover .title{ color: #00adae; }
+.our-team .post{
+    display: block;
+    font-size: 14px;
+    color: #464646;
+}
