@@ -5,13 +5,10 @@
 	<title>@yield('title')</title>
 	<link rel="stylesheet" href="{{ asset('css/app.css') }}">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
-	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
-	<link href="https://fonts.googleapis.com/css?family=Abril+Fatface|Roboto|Source+Serif+Pro|Srisakdi" rel="stylesheet">
 	<link rel="stylesheet" href="{{ asset('css/style3.css') }}">
-
-	<link rel="stylesheet" href="https://cdn.rawgit.com/Eonasdan/bootstrap-datetimepicker/e8bddc60e73c1ec2475f827be36e1957af72e2ea/build/css/bootstrap-datetimepicker.css">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
-	<link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+	<link href="https://fonts.googleapis.com/css?family=Anton|Baloo+Bhai|Courgette|Macondo+Swash+Caps|Maiden+Orange|Old+Standard+TT|Orbitron|Roboto|Roboto+Slab" rel="stylesheet">
 
 
 </head>
@@ -23,7 +20,7 @@
 					<span class="navbar-toggler-icon"></span>
 				</button>
 				<a href="#">
-					<img src="https://coreui.io/docs/assets/brand/bootstrap-solid.svg" width="30" height="30" alt="">
+					<img class="logo" src="{{ asset('img/bus5.jpeg') }}" width="40%" height="40%">
 				</a>
 				<div class="collapse navbar-collapse">
 					<ul class="navbar-nav ml-auto">
@@ -47,6 +44,8 @@
 		</div>
 	</div>
 	<!-- end of navigation -->
+
+
 
 	@yield('content')
 
@@ -89,12 +88,12 @@
 
 	<script>
 		$('select').change(function() {
-		$(this)
-		.siblings('select')
-		.children('option[value=' + this.value + ']')
-		.attr('disabled', true)
-		.siblings().removeAttr('disabled');
-	});
+			$(this)
+			.siblings('select')
+			.children('option[value=' + this.value + ']')
+			.attr('disabled', true)
+			.siblings().removeAttr('disabled');
+		});
 	</script>
 </body>
 </html>

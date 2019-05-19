@@ -1,4 +1,4 @@
-@extends('layouts/bus')
+@extends('layouts.bus')
 @section('content')
 
 <div class="container-fluid py-3">
