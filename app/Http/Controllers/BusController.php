@@ -15,14 +15,20 @@ class BusController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index(BusFilters $filter)
+    public function index(BusFilters $filter,Request $request)
     {
-         //dd($request->all());
+         
         $townships = Township::get();
         if (request('route')) {
-            $bus = Bus::filter($filter)->get();
-            // return $bus;
-            return view('bus.select_seat',compact('bus'));
+            $route = Bus::filter($filter)->get();
+            if (!$route->isEmpty()) {
+
+                $routes = null;
+                return view('bus.select_seat',compact('bus','routes'));
+            }
+            $routes = \App\Route::where('from',$request->route[0])->where('to',$request->route[1])->get();
+
+            return view('bus.select_seat',compact('bus','routes'));
         }
 
         $request = request();
