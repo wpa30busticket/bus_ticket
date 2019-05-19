@@ -15,8 +15,10 @@ class CreateSeatsTable extends Migration
     {
         Schema::create('seats', function (Blueprint $table) {
             $table->increments('id');
-            $table->unsignedInteger('bus_id')->index();
+            $table->unsignedInteger('route_id')->index();
             $table->integer('seat_no')->index();
+            $table->integer('price')->default(10000);
+            $table->boolean('status')->default(0);
             $table->timestamps();
         });
     }
