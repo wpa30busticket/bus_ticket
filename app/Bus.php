@@ -22,4 +22,9 @@ class Bus extends Model
     {
     	return $this->hasMany(TicketBooking::class,'bus_id');
     }
+
+    public function seat()
+    {
+        return $this->hasMany(Seat::class,'route_id');
+    }
 }

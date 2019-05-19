@@ -15,7 +15,7 @@
 				<form action="{{route('bus.index')}}" method="get">
 		<div class="form-group">
 			<label for="Leaving from:">Leaving from:</label>
-			<select name="route[]" class="form-control select2">
+			<select name="route[]" class="form-control select2" required="">
 				<option value="">Select a location</option>
 								@foreach($townships as $township)
 								<option class="text-my"  value="{{$township->id}}" {{ (request('from') == $township->id)? 'selected' : '' }}>
@@ -24,7 +24,7 @@
 								@endforeach
 			</select>
 			<label for="Going to:">Going to:</label>
-			<select name="route[]" class="form-control select2">
+			<select name="route[]" class="form-control select2" required="">
 				<option value="">Select a location</option>
 								@foreach($townships as $township)
 								<option class="text-my"  value="{{$township->id}}" {{ (request('to') == $township->id)? 'selected' : '' }}>

@@ -13,6 +13,11 @@ class Route extends Model
     	return $this->hasMany(TicketBooking::class,'route_id');
     }
 
+    public function seat()
+    {
+        return $this->hasMany(Seat::class,'route_id');
+    }
+
     public function bus()
     {
     	return $this->belongsTo(Bus::class);

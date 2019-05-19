@@ -20,6 +20,9 @@ class BusFilters extends Filters
     	$route = \App\Route::where('from',$from)->where('to',$to)->first();
 
     	if ($route) {
+    		// return $this->builder->whereHas('seat', function($query) use ($route) {
+    		// 	$query->where('route_id',$route->id)->where('status',0);
+    		// });
 	        return $this->builder->whereHas('booking', function($query) use ($route) {
 	        	$query->where('route_id',$route->id);
 	        });
