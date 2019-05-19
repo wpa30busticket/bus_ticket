@@ -20,16 +20,15 @@ class BusController extends Controller
          
         $townships = Township::get();
         if (request('route')) {
-            $routes = Bus::filter($filter)->get();
-            if (!$routes->isEmpty()) {
-                $routes = null;
+            $route = Bus::filter($filter)->get();
+            if (!$route->isEmpty()) {
 
+                $routes = null;
                 return view('bus.select_seat',compact('bus','routes'));
             }
-
             $routes = \App\Route::where('from',$request->route[0])->where('to',$request->route[1])->get();
 
-            return view('bus.select_seat',compact('bus','routes'));
+            return view('bus.select_seat',compact('routes'));
         }
 
         $request = request();

@@ -1,44 +1,11 @@
 @extends('layouts/bus')
 @section('title', 'Bus Online Booking')
 @section('content')
-<<<<<<< HEAD
-<div class="container" id="cover">
-	<div class="row">				
-	</div>
-	<div id="heading">
-		<a href="{{ route('bus.index') }}"><h1 class="text-center text-uppercase animated shake 4s"> Myanmar Bus Online Booking</h1></a>
-	</div>		
-</div>
-<div class="page1"> 
-	<div class="container" id="route-plan">
-		<div class="row">
-			<div class="col-lg-7 col-md-8 col-sm-8"   id="one" >
-				<form action="{{route('bus.index')}}" method="get">
-		<div class="form-group">
-			<label for="Leaving from:">Leaving from:</label>
-			<select name="route[]" class="form-control select2" required="">
-				<option value="">Select a location</option>
-								@foreach($townships as $township)
-								<option class="text-my"  value="{{$township->id}}" {{ (request('from') == $township->id)? 'selected' : '' }}>
-									{{$township->name}}
-								</option>
-								@endforeach
-			</select>
-			<label for="Going to:">Going to:</label>
-			<select name="route[]" class="form-control select2" required="">
-				<option value="">Select a location</option>
-								@foreach($townships as $township)
-								<option class="text-my"  value="{{$township->id}}" {{ (request('to') == $township->id)? 'selected' : '' }}>
-									{{$township->name}}
-								</option>
-								@endforeach
-			</select><br><br>
-			<button class="btn btn-success">Submit</button>
-=======
+
 <div class="container">
 		<div id="home">
 			<a href="#"><h1 class="text-center text-uppercase"> Myanmar Bus Online Booking</h1></a>
->>>>>>> a0aa237d837f2d7c01e923235d13f0cbe731bdf7
+
 		</div>
 </div>
 	<!-- end of cover -->
