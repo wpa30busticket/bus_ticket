@@ -24,7 +24,7 @@ class BusController extends Controller
             if (!$route->isEmpty()) {
 
                 $routes = null;
-                return view('bus.select_seat',compact('bus','routes'));
+                return view('bus.select_seat',compact('routes'));
             }
             $routes = \App\Route::where('from',$request->route[0])->where('to',$request->route[1])->get();
 

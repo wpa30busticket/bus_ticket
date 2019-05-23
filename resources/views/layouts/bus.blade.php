@@ -3,6 +3,7 @@
 <head>
 	<meta charset="UTF-8">
 	<title>@yield('title')</title>
+	<link rel="shortcut icon" type="image/png" href="{{ asset('img/favicon-16x16.png') }}"/>
 	<link rel="stylesheet" href="{{ asset('css/app.css') }}">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
 	<link rel="stylesheet" href="{{ asset('css/style3.css') }}">
@@ -19,8 +20,8 @@
 				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
 					<span class="navbar-toggler-icon"></span>
 				</button>
-				<a href="#">
-					<img class="logo" src="{{ asset('img/bus5.jpeg') }}" width="40%" height="40%">
+				<a href="{{ url('/') }}">
+					<img class="logo" src="{{ asset('img/android-icon-48x48.png') }}" sizes="48x48">
 				</a>
 				<div class="collapse navbar-collapse">
 					<ul class="navbar-nav ml-auto">
@@ -70,7 +71,7 @@
 			<div class="col-lg-4 col-md-4 col-sm-4" id="about">
 				<h5 class="text-uppercase">Newsletter</h5>
 				<div class="input-group mb-3">
-					<input type="text" class="form-control" placeholder="Recipient's username" aria-label="Email address" aria-describedby="basic-addon2">
+					<input type="text" class="form-control" placeholder="Email address" aria-label="Email address" aria-describedby="basic-addon2">
 					<div class="input-group-append">
 						<button class="btn btn-outline-secondary" type="button">Sent</button>
 					</div>

@@ -67,6 +67,14 @@ Route::group(['prefix' => 'dashboard',], function( ) {
 	Route::post('/townships/create', 'TownshipController@store')->name('townships.store');
 	Route::get('/townships/{id}/edit', 'TownshipController@edit')->name('townships.edit');
 	Route::post('/townships/{id}/update', 'TownshipController@update')->name('townships.update');
+
+	//backend sidebar  //add seat crud
+	Route::get('/seats', 'SeatController@index')->name('seats.index');
+	Route::delete('/seats/{id}/delete', 'SeatController@destroy')->name('seats.destroy');
+	Route::get('/seats/create', 'SeatController@create')->name('seats.create');
+	Route::post('/seat/create', 'SeatController@store')->name('seats.store');
+	Route::get('/seats/{id}/edit', 'SeatController@edit')->name('seats.edit');
+	Route::post('/seats/{id}/update', 'SeatController@update')->name('seats.update');
 });
 
 Auth::routes();

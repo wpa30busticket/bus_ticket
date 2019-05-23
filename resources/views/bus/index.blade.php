@@ -15,7 +15,7 @@
 			<div class="col-lg-8 col-md-8 col-sm-8">
 				<form action="#" method="get">
 					<label class="text-my" id="from-to">Leaving From</label>
-					<select id="from" name="route[]" class="form-control chosen select2">
+					<select id="from" name="route[]" class="form-control chosen select2" required="">
 						<option value="">Select a location</option>
 						@foreach($townships as $township)
 						<option class="text-my" value="{{$township->id}}" {{ (request('from') == $township->id)? 'selected' : '' }}>
@@ -24,7 +24,7 @@
 						@endforeach
 					</select>
 					<label class="text-my" id="from-to">Going To</label>
-					<select id="to" name="route[]" class="form-control chosen select2">
+					<select id="to" name="route[]" class="form-control chosen select2" required="">
 						<option value="">Select a location</option>
 						@foreach($townships as $township)
 						<option class="text-my"  value="{{$township->id}}" {{ (request('to') == $township->id)? 'selected' : '' }}>
@@ -51,7 +51,7 @@
 				<h2 class="section-title text-center text-uppercase">Our Partners</h2>
 				<div class="row" id="portfolio-wrapper">
 					<div class="col-lg-2 col-md-6 portfolio-item filter-app">
-						<a href="">
+						<a href="#">
 							<img src="img/partner.jpg" alt="">
 							<div class="details">
 								<span>Thank for your payment</span>
@@ -60,7 +60,7 @@
 					</div>
 
 					<div class="col-lg-2 col-md-6 portfolio-item filter-app">
-							<a href="">
+							<a href="#">
 								<img src="img/telenor.jpg" alt="">
 								<div class="details">
 									<span>Thank for your payment</span>
@@ -69,7 +69,7 @@
 						</div>
 
 						<div class="col-lg-2 col-md-6 portfolio-item filter-app">
-							<a href="">
+							<a href="#">
 								<img src="img/telenor.jpg" alt="">
 								<div class="details">
 									<span>Thank for your payment</span>
@@ -78,7 +78,7 @@
 						</div>
 
 					<div class="col-lg-2 col-md-6 portfolio-item filter-web">
-						<a href="">
+						<a href="#">
 							<img src="img/cb.jpeg" alt="">
 							<div class="details">
 								<span>Thank for your payment</span>
@@ -87,7 +87,7 @@
 					</div>
 
 					<div class="col-lg-2 col-md-6 portfolio-item filter-app">
-						<a href="">
+						<a href="#">
 							<img src="img/telenor.jpg" alt="">
 							<div class="details">
 								<span>Thank for your payment</span>
@@ -96,7 +96,7 @@
 					</div>
 
 					<div class="col-lg-2 col-md-6 portfolio-item filter-card">
-						<a href="">
+						<a href="#">
 							<img src="img/wavemoney.jpeg" alt="">
 							<div class="details">
 								<span>Thank for your payment</span>
@@ -105,7 +105,7 @@
 					</div>
 					<div class="row" id="portfolio-wrapper">
 						<div class="col-lg-2 col-md-6 portfolio-item filter-app">
-							<a href="">
+							<a href="#">
 								<img src="img/kbz.jpeg" alt="">
 								<div class="details">
 									<span>Thank for your payment</span>
@@ -114,7 +114,7 @@
 						</div>
 
 						<div class="col-lg-2 col-md-6 portfolio-item filter-web">
-							<a href="">
+							<a href="#">
 								<img src="img/cb.jpeg" alt="">
 								<div class="details">
 									<span>Thank for your payment</span>
@@ -123,7 +123,7 @@
 						</div>
 
 						<div class="col-lg-2 col-md-6 portfolio-item filter-app">
-							<a href="">
+							<a href="#">
 								<img src="img/telenor.jpg" alt="">
 								<div class="details">
 									<span>Thank for your payment</span>
@@ -132,7 +132,7 @@
 						</div>
 
 						<div class="col-lg-2 col-md-6 portfolio-item filter-app">
-							<a href="">
+							<a href="#">
 								<img src="img/telenor.jpg" alt="">
 								<div class="details">
 									<span>Thank for your payment</span>
@@ -141,7 +141,7 @@
 						</div>
 
 						<div class="col-lg-2 col-md-6 portfolio-item filter-app">
-							<a href="">
+							<a href="#">
 								<img src="img/telenor.jpg" alt="">
 								<div class="details">
 									<span>Thank for your payment</span>
@@ -150,7 +150,7 @@
 						</div>
 
 						<div class="col-lg-2 col-md-6 portfolio-item filter-card">
-							<a href="">
+							<a href="#">
 								<img src="img/wavemoney.jpeg" alt="">
 								<div class="details">
 									<span>Thank for your payment</span>
