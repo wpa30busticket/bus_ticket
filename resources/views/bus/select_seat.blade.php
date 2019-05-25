@@ -264,7 +264,7 @@
 				<div class="col-md-3 col-sm-5 col-xs-6 margin-top-sm">
 					<label class="text-my hidden-lg hidden-md">Leaving From</label>
 
-					<select class="form-control text-my" name="sourceId" id="sourceId" tabindex="-1">
+					<select class="form-control text-my" name="sourceId" id="sourceId" tabindex="-1" disabled="">
 						<option class="text-my" value="">--- Select ---</option>
 
 						<option class="text-my" value="Yangon" selected="">
@@ -288,7 +288,7 @@
 				<div class="col-md-3 col-sm-5 col-xs-6 margin-top-sm">
 					<label class="text-my hidden-lg hidden-md">Going to</label>
 
-					<select class="form-control text-my" name="destinationId" id="destinationId" tabindex="-1">
+					<select class="form-control text-my" name="destinationId" id="destinationId" tabindex="-1" disabled="">
 						<option class="text-my" value="">--- Select ---</option>
 
 						

@@ -1,9 +1,10 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use App\Route;
 use Illuminate\Http\Request;
 use \App\Seat;
+use DB;
 class SeatController extends Controller
 {
     public function __construct() {
@@ -30,7 +31,7 @@ class SeatController extends Controller
      */
     public function create()
     {
-        //
+        return view('backend.seat.create');
     }
 
     /**
@@ -41,7 +42,15 @@ class SeatController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $seat = $request->validate([
+            'route_id'=> 'required',
+            'seat_no'=> 'required',
+            'price'=> 'required',
+            'status'=> 'required',
+        ]);
+        Seat::create($seat);
+        return redirect()->route('seats.index');
+
     }
 
     /**
@@ -63,7 +72,8 @@ class SeatController extends Controller
      */
     public function edit($id)
     {
-        //
+         $seat = Seat::find($id);
+         return view('backend.seat.edit', compact("seat"));
     }
 
     /**
@@ -75,7 +85,15 @@ class SeatController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $request->validate([
+        'route_id'=> 'required',
+            'seat_no'=> 'required',
+            'price'=> 'required',
+            'status'=> 'required',
+    ]);
+      $seats =  Seat::find($id);
+      $seats->update($request->except("_token"));
+      return redirect()->route('seats.index');
     }
 
     /**
@@ -86,6 +104,7 @@ class SeatController extends Controller
      */
     public function destroy($id)
     {
-        //
+        DB::table('seats')->delete($id);
+        return redirect()->back();
     }
 }
