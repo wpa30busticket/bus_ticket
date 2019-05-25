@@ -257,6 +257,9 @@
     transform: scale(.98)
   }
 }
+#page1{
+  padding-bottom: 30px;
+}
 </style>
 	<div class="search-box"  id="header">
 		<div class="container">

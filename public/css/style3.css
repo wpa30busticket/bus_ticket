@@ -11,20 +11,6 @@ font-family: 'Orbitron', sans-serif;
 font-family: 'Courgette', cursive;
 font-family: 'Old Standard TT', serif;**/
 
-/*#cover{
-	background: url(../img/bu2.jpg);
-	background-size: cover;
-	-webkit-background-size: cover;
-	-moz-background-size: cover;
-	-o-background-size: cover;
-	-ms-background-size: cover;
-	background-color: #000;
-	height: 100%;
-	width: 100%;
-	margin-top: 30px;
-	padding: 50px 0px;
-}*/
-
 #navigation{
 	font-family: 'Maiden Orange', cursive;
 	font-size: 20px;
@@ -59,6 +45,7 @@ font-family: 'Old Standard TT', serif;**/
 }*/
 #route,#search{
 	padding: 30px 0;
+  background: #F7F8FC;
 }
 #from-to{
 	font-size: 25px;
@@ -67,7 +54,7 @@ font-family: 'Old Standard TT', serif;**/
 }
 
 /*portfolio*/
-#portfolio, #team,#route {
+#portfolio, #team{
   background: #f7f7f7;
   padding: 20px 0;
   margin-top: 20px;
@@ -165,8 +152,8 @@ font-family: 'Old Standard TT', serif;**/
 #foot{
 	background-color:#E4E4E4;
 	font-family: 'Courgette', cursive;
-	margin: 30px 0;
-	padding: 10px 20px;
+	margin: 20px 0;
+	padding: 20px 20px;
 }
 #cover p{
 	text-shadow: 4px 4px 4px #fff;
@@ -342,16 +329,6 @@ img{
 	margin: 3em 0 3em 0;
 	background: #E8E8E8;
 }
-#aa{
-	background: #fff;
-	padding-top: 30px;
-
-}
-#search{
-	background: #fff;
-	padding-bottom: 30px;
-}
-
 label {
 	margin: 15px 0 20px 0;
 }

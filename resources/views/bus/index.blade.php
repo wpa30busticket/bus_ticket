@@ -33,18 +33,18 @@
 						@endforeach
 					</select>
 					<div class="row" id="search">
-
-						<div class="col-md-12 text-center">
-							<button class="btn btn-success">Search</button>
+						<div class=" col-md-12 text-center">
+							<button class="btn btn-success">Search</button>	
 						</div>
 					</div>
 				</form>
 
 			</div>
-			<div class="col-md-4 text-center" id="one">
+			<div class="col-md-4">
 				<img src="img/telenor.jpg" alt="">
 			</div>
 		</div>
+	</div>
 		<!-- end of route -->
 <div class="container"> 
 			<section id="portfolio">
