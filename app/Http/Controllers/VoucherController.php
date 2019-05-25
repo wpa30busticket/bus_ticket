@@ -14,7 +14,13 @@ class VoucherController extends Controller
     public function index()
     {
         $data = \Session::get('guest');
-        return view('bus.voucher', compact('data'));
+        $id = \Session::get('id');
+        // $id = $request->session()->get('id');
+
+        $route = \App\Route::findOrFail($id);
+
+        // dd($route);
+        return view('bus.voucher', compact('data', 'route'));
     }
 
     /**

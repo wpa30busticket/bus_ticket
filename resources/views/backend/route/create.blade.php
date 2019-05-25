@@ -1,4 +1,4 @@
-@extends('layouts/admin_layout')
+	@extends('layouts/admin_layout')
 @section('title', 'Dashboard | Add route')
 @section('content')
 

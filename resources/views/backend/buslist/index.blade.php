@@ -45,7 +45,7 @@
 							<td>
 							<form action="{{ route('buslist.edit', $bus->id) }}" method="POST">
 									@csrf
-									@method('patch')
+									@method('PATCH')
 									<button type="submit" class="btn btn-success">edit</button> 
 								</form>
 							</td>

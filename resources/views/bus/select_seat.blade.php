@@ -366,7 +366,7 @@
 									<div class="box box-border">
 										<p class="rate">13,500 <span>MMK/Seat</span></p>
 										<p>Total: 40,500 MMK</p>
-										<a href="{{ route('bus.seats')}}" class="btn btn-danger" id="seat"> select seat</a>
+										<a href="{{ route('bus.seats',['id' => $route])}}" class="btn btn-danger" id="seat"> select seat</a>
 									</div>
 								</div>
 							</div>

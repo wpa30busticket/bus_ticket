@@ -18,6 +18,7 @@ class BusController extends Controller
     public function index(BusFilters $filter,Request $request)
     {
 
+            // dd($request->all());
         $townships = Township::get();
         if (request('route')) {
             $route = Bus::filter($filter)->get();
@@ -25,20 +26,29 @@ class BusController extends Controller
                 $routes = null;
                 return view('bus.select_seat',compact('routes'));
             }
+
             $routes = \App\Route::where('from',$request->route[0])->where('to',$request->route[1])->get();
+            $request->session()->put('routes', $routes);
+            $routes = $request->session()->get('routes');
             return view('bus.select_seat',compact('routes'));
         }
         $request = request();
         return view('bus.index',compact('townships','request'));
     }
 
-    public function select($type) {
+    // public function select($type) {
 
-        return view('bus.select_seat');
-    }
+    //     return view('bus.select_seat');
+    // }
 
-    public function seats() {
-        return view('bus.seats');
+    public function seats(Request $request) {
+
+        $request->session()->put('id', $request->id);
+        $id = $request->session()->get('id');
+
+        $route = \App\Route::findOrFail($id);
+        
+        return view('bus.seats',compact('route'));
     }
 
     public function customerlogin() {
