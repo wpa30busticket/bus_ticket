@@ -21,7 +21,7 @@
 					<span class="navbar-toggler-icon"></span>
 				</button>
 				<a href="{{ url('/') }}">
-					<img class="logo" src="{{ asset('img/android-icon-48x48.png') }}" sizes="48x48">
+					<img class="logo" src="{{ asset('img/favicon-32x32.png') }}" sizes="48x48">
 				</a>
 				<div class="collapse navbar-collapse">
 					<ul class="navbar-nav ml-auto">

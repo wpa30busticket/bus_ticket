@@ -17,20 +17,17 @@ class BusController extends Controller
      */
     public function index(BusFilters $filter,Request $request)
     {
-         
+
         $townships = Township::get();
         if (request('route')) {
             $route = Bus::filter($filter)->get();
             if (!$route->isEmpty()) {
-
                 $routes = null;
                 return view('bus.select_seat',compact('routes'));
             }
             $routes = \App\Route::where('from',$request->route[0])->where('to',$request->route[1])->get();
-
             return view('bus.select_seat',compact('routes'));
         }
-
         $request = request();
         return view('bus.index',compact('townships','request'));
     }
@@ -70,15 +67,15 @@ class BusController extends Controller
     public function store(Request $request)
     {
 
-    $data =    $request->validate([
-        'name' => 'required|max:255',
-        'email' => 'required|max:255',
-        'phone' => 'required|max:15',
-        'address' => 'required|max:255',
-        'nrc' => 'required|max:255',
-    ]);
+        $data =    $request->validate([
+            'name' => 'required|max:255',
+            'email' => 'required|max:255',
+            'phone' => 'required|max:15',
+            'address' => 'required|max:255',
+            'nrc' => 'required|max:255',
+        ]);
     // dd($data);
-       
+
         $guest =  new \App\Guest;
         $guest->name = $request->name;
         $guest->email = $request->email;
@@ -93,7 +90,7 @@ class BusController extends Controller
         return redirect()->route('bus.payment', compact("guest"));
 
 
-   }
+    }
 
     /**
      * Display the specified resource.

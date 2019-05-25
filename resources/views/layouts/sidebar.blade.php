@@ -71,6 +71,19 @@
           </ul>
         </li>
 
+        <li class="treeview">
+          <a href="#">
+            <i class="fa fa-user"></i> <span>Seats</span>
+            <span class="pull-right-container">
+              <i class="fa fa-angle-left pull-right"></i>
+            </span>
+          </a>
+          <ul class="treeview-menu">
+            <li><a href="{{ route('seats.create') }}"><i class="fa fa-circle-o"></i> Add new seat</a></li>
+            <li><a href="{{ route('seats.index') }}"><i class="fa fa-circle-o"></i> Seat list</a></li>
+          </ul>
+        </li>
+
          <li class="treeview">
           <a href="#">
             <i class="fa fa-user"></i> <span>Bus</span>
