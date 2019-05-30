@@ -51,6 +51,7 @@ Route::group(['prefix' => 'dashboard',], function( ) {
 	Route::get('/route-list/{id}/edit', 'RouteController@edit')->name('route.edit');
 	Route::patch('/route-list/{id}/update', 'RouteController@update')->name('route.update');
 	Route::delete('/route-list/{id}/delete', 'RouteController@destroy')->name('route.destroy');
+	Route::post('/route-list/{id}/view', 'RouteController@show')->name('route.show');
 
 	//backend sidebar //add new bus and list
 	Route::get('/bus-list', 'BuslistController@index')->name('buslist.index');

@@ -61,7 +61,7 @@ class RouteController extends Controller
      */
     public function show($id)
     {
-        //
+        return "ok";
     }
 
     /**
