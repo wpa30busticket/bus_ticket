@@ -345,7 +345,7 @@
 								<div class="col-md-6 col-xs-12">
 									<div class="box">
 										
-										<h1> {{ $route->bus->name }} </h1>
+										<h1> {{ optional($route->bus)->name }} </h1>
 										{{ $route->fromTownship->name}} - {{ $route->toTownship->name}}
 										<p>
 											<span>Departs:</span> Mar 11, 08:00 AM

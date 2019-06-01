@@ -3,7 +3,7 @@
 @section('content')
 
 <style>
-	.seatSelection {
+.seatSelection {
   text-align: center;
   padding: 5px;
   margin: 15px;
@@ -43,6 +43,28 @@
 .seatsAmount {
   max-width: 2em;
 }
+.seatsChart{
+  padding-top: 20px;
+}
+
+#no {
+    background-color: #7F7F7F;
+    width: 0.2px;
+    height: 0.2px;
+    padding: 10px;
+    border: solid 1px;
+}
+
+#yes {
+    background-color: #6E69EF;
+    width: 0.2px;
+    height: 0.2px;
+    padding: 10px;
+    border: solid 1px;
+}
+p{
+  padding-left: 20px;
+}
 
 </style>
 <div class="section section-bg">
@@ -56,10 +78,14 @@
 					<div class="panel-body">
 						<div class="row" >
 							<div class="seatSelection col-lg-12">
-                        <p class="seatSection">
+                        <!-- <p class="seatSection">
                          Your first
                             <span class="freeSeats">2</span> seats selected will be Free.<br /> You can add more seats and proceed to check out.
-                        </p>
+                        </p> -->
+                        <div id="no"><p>Unavailabe</p></div><br>
+                        
+                        <div id="yes"><p>Available</p></div>
+                        
                         <div class="seatsChart col-lg-6">
                             <div class="seatRow">
                                 <div class="seatRowNumber">
@@ -141,93 +167,93 @@
 
                     <div class="checkout col-lg-offset-6">
                         <span>Subtotal: CA$</span><span class="txtSubTotal">0.00</span><br /><button id="btnCheckout" name="btnCheckout" class="btn btn-primary"> Check out </button>
-                       
+
                     </div>
                 </div>
-						</div>
-					</div>
-				</div>
+            </div>
+        </div>
+    </div>
 
-				<div class="col-md-5">
+    <div class="col-md-5">
 
-					<div class="panel panel-default">
-						<div class="panel-heading text-my">
-							Trip Information
-						</div>
-						<div class="panel-body">
-							<table class="table table-striped">
-								<tbody>
-									<tr>
-										<td class=" col-md-4 text-my">
-											Operator
-										</td>
-										<td class=" col-md-8 text-my">
-											Shwe Sin Set Kyar
-										</td>
-									</tr>
+       <div class="panel panel-default">
+          <div class="panel-heading text-my">
+             Trip Information
+         </div>
+         <div class="panel-body">
+             <table class="table table-striped">
+                <tbody>
+                   <tr>
+                      <td class=" col-md-4 text-my">
+                         Operator
+                     </td>
+                     <td class=" col-md-8 text-my">
+                         Shwe Sin Set Kyar
+                     </td>
+                 </tr>
 
-									<tr>
-										<td class="col-md-4 text-my">
-											Route
-										</td>
-										<td class="col-md-8 text-my">
+                 <tr>
+                  <td class="col-md-4 text-my">
+                     Route
+                 </td>
+                 <td class="col-md-8 text-my">
 
-											Yangon - Monywa
+                     Yangon - Monywa
 
-										</td>
-									</tr>
-									<tr>
-										<td class="text-my">
-											Departure Time
-										</td>
-										<td>
-											Mar 18, 08:00 AM
-										</td>
-									</tr>
-									<tr>
-										<td class="text-my">
-											Arrival Time
-										</td>
-										<td>
-											Mar 18, 08:00 PM
-										</td>
-									</tr>
+                 </td>
+             </tr>
+             <tr>
+              <td class="text-my">
+                 Departure Time
+             </td>
+             <td>
+                 Mar 18, 08:00 AM
+             </td>
+         </tr>
+         <tr>
+          <td class="text-my">
+             Arrival Time
+         </td>
+         <td>
+             Mar 18, 08:00 PM
+         </td>
+     </tr>
 
 
 
-									<tr>
-										<td class="text-my">
-											Subtotal
-										</td>
-										<td>
-											54,000 MMK
-										</td>
-									</tr>
+     <tr>
+      <td class="text-my">
+         Subtotal
+     </td>
+     <td>
+         54,000 MMK
+     </td>
+ </tr>
 
-								</tbody>
-							</table>
+</tbody>
+</table>
 
-							<hr>
+<hr>
 
-							<h3 class="text-my text-muted text-center">Please select (  ) Seats.</h3>
-							<div class="row" id="search">
-								
-								<div class="col-md-12 text-center">
-									<a href="{{ route('guest.login') }}" class="myButton btn btn-success">Continue Info</a>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-	<script>
+<h3 class="text-my text-muted text-center">Please select (  ) Seats.</h3>
+<div class="row" id="search">
+
+    <div class="col-md-12 text-center">
+       <a href="{{ route('guest.login') }}" class="myButton btn btn-success">Continue Info</a>
+   </div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script>
 		     // Clicking any seat
-        $(".seatNumber").click(
-            function () {
-                if (!$(this).hasClass("seatUnavailable")){
+             $(".seatNumber").click(
+                function () {
+                    if (!$(this).hasClass("seatUnavailable")){
                     // If selected, unselect it
                     if ($(this).hasClass("seatSelected")) {
                         var thisId = $(this).attr('id');
@@ -265,7 +291,7 @@
                     }
                 }
             }
-        );
+            );
         // Clicking any of the dynamically-generated X buttons on the list
         $(document).on('click', ".removeSeat", function () {
             // Getting the Id of the Seat
@@ -275,8 +301,8 @@
             $("#" + id[1] + ".seatNumber").removeClass("seatSelected");
             removeFromCheckout(price);
             refreshCounter();
-          }
-      );
+        }
+        );
         // Show tooltip on hover.
         $(".seatNumber").hover(
             function () {
@@ -322,6 +348,6 @@
                 $('.seatSelected').removeClass('seatSelected');
                 $('#seatsList li').remove();
             }
-        );
-	</script>
-	@endsection
+            );
+        </script>
+        @endsection
