@@ -7,6 +7,7 @@
 	<link rel="stylesheet" href="{{ asset('css/app.css') }}">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
 	<link rel="stylesheet" href="{{ asset('css/style3.css') }}">
+	<link rel="stylesheet" href="{{ asset('css/seats.css') }}">
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
 	<link href="https://fonts.googleapis.com/css?family=Anton|Baloo+Bhai|Courgette|Macondo+Swash+Caps|Maiden+Orange|Old+Standard+TT|Orbitron|Roboto|Roboto+Slab" rel="stylesheet">
@@ -86,6 +87,7 @@
 	<script src="{{ asset('bower_components/jquery/dist/jquery.js') }}"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
 	<script src="{{ asset('js/app.js') }}"></script>
+	<script src="{{ asset('js/seats.js') }}"></script>
 
 	<script>
 		$('select').change(function() {

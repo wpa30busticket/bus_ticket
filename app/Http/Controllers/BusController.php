@@ -65,7 +65,7 @@ class BusController extends Controller
 
         $request->session()->put('route', $request->route);
         $route = $request->session()->get('route');
-
+        
         return view('bus.guest',compact('totalAmount','seat','route'));
     }
     /**
