@@ -92,13 +92,11 @@
             <!-- Tabs within a box -->
             <ul class="nav nav-tabs pull-right">
               <li class="active"><a href="#revenue-chart" data-toggle="tab">Area</a></li>
-              <li><a href="#sales-chart" data-toggle="tab">Donut</a></li>
               <li class="pull-left header"><i class="fa fa-inbox"></i> Sales</li>
             </ul>
             <div class="tab-content no-padding">
               <!-- Morris chart - Sales -->
               <div class="chart tab-pane active" id="revenue-chart" style="position: relative; height: 300px;"></div>
-              <div class="chart tab-pane" id="sales-chart" style="position: relative; height: 300px;"></div>
             </div>
           </div>
           <!-- /.nav-tabs-custom -->
@@ -506,4 +504,32 @@
   <div class="control-sidebar-bg"></div>
 </div>
 <!-- ./wrapper -->
+<script>
+  document.addEventListener("DOMContentLoaded", function(event) { 
+   // your page initialization code here
+   // the DOM will be available here
+   new Morris.Line({
+  // ID of the element in which to draw the chart.
+  element: 'revenue-chart',
+  // Chart data records -- each entry in this array corresponds to a point on
+  // the chart.
+  data: [
+  { year: '{{ date('Y') }}', value: 50 },
+  { year: '2009', value: 10 },
+  { year: '2010', value: 5 },
+  { year: '2011', value: 5 },
+  { year: '2012', value: 20 },
+  { year: '2013', value: 20 },
+  { year: '2014', value: 20 },
+  ],
+  // The name of the data record attribute that contains x-values.
+  xkey: 'year',
+  // A list of names of data record attributes that contain y-values.
+  ykeys: ['value'],
+  // Labels for the ykeys -- will be displayed when you hover over the
+  // chart.
+  labels: ['Value']
+});
+});
+</script>
 @endsection

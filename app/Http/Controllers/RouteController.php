@@ -46,6 +46,7 @@ class RouteController extends Controller
         $route = $request->validate([
             'from'=> 'required',
             'to'=> 'required',
+            'price' => 'required',
             'bus_id'=> 'required',
         ]);
         Route::create($route);
@@ -61,7 +62,8 @@ class RouteController extends Controller
      */
     public function show($id)
     {
-        //
+        $bus = Route::find($id);
+        return $bus;
     }
 
     /**

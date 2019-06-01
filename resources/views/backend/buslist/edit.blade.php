@@ -20,6 +20,7 @@
 	<section class="content">
 		<form method="POST" action="{{ route('buslist.update', $bus->id) }}">
 			@csrf
+			@method['PATCH']
 			<div class="form-group">
 				<label for="name">Bus name</label>
 				<input type="text" class="form-control" value="{{ $bus->name }}" id="name" placeholder="Enter bus name" name="name" autofocus="" required="">

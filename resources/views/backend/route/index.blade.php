@@ -25,9 +25,11 @@
 							<th scope="col">Bus Number</th>
 							<th scope="col">From</th>
 							<th scope="col">To</th>
+							<th scope="col">Price</th>
 							<th scope="col">Created_at</th>
+							<th scope="col">View Seat</th>
 							<th scope="col">Delete</th>
-							<th scope="col">Edit</th>
+							<th scope="col">Edit</th>	
 						</tr>
 					</thead>
 					<tbody>
@@ -38,17 +40,25 @@
 							<td>{{ $route->bus['bus_no'] ?? '-'}}</td>
 							<td>{{ $route->fromTownship['name'] ?? '-' }}</td>
 							<td>{{ $route->toTownship['name'] ?? '-' }} </td>
+							<td>{{ $route->price ?? '-' }} </td>
 							<td>{{ $route->created_at->toDateString() }}</td>
+							<td>
+								<form action="{{ route('route.show', $route->id) }}" method="POST">
+									@csrf
+									<button type="submit" class="btn btn-success">View</button>
+								</form>
+							</td>
 							<td>
 								<form action="{{ route('route.destroy', $route->id) }}" method="POST">
 									@csrf
 									@method('delete')
-									<button type="submit" class="btn btn-danger">delete</button>
+									<button type="submit" class="btn btn-danger">Delete</button>
 								</form>
 							</td>
 							<td>
 								<a href="{{route('route.edit',$route->id)}}" class="btn btn-info">Edit</a>
 							</td>
+
 						</tr>
 						@endforeach
 					</tbody>

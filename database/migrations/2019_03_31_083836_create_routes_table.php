@@ -18,6 +18,7 @@ class CreateRoutesTable extends Migration
             $table->unsignedInteger('bus_id')->index();
             $table->unsignedInteger('from')->index();
             $table->unsignedInteger('to')->index();
+            $table->integer('price')->default('10000');;
             $table->timestamps();
         });
     }

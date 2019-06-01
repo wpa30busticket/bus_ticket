@@ -61,41 +61,46 @@
             <th>To</th>
             <th>Seats</th>
             <th>Bus No</th>
+            <th>Bus name</th>
             <th>Amount</th>
           </tr>
           </thead>
           <tbody>
           <tr>
             <td>1</td>
-            <td>Mdy</td>
-            <td>NPT</td>
+            <td> {{$route->fromTownship->name}} </td>
+            <td> {{$route->toTownship->name}} </td>
             <td>B21, A2</td>
-            <td>12B/231</td>
+            <td> {{ $route->bus->bus_no }}</td>
+            <td> {{ $route->bus->name }}</td>
             <td>4400ks</td>
           </tr>
           <tr>
-            <td>1</td>
-            <td>Kalay</td>
-            <td>Monywa</td>
-            <td>C12, A2</td>
-            <td>1A/12934</td>
-            <td>30000ks</td>
+             <td>1</td>
+            <td> {{$route->fromTownship->name}} </td>
+            <td> {{$route->toTownship->name}} </td>
+            <td>B21, A2</td>
+            <td> {{ $route->bus->bus_no }}</td>
+            <td> {{ $route->bus->name }}</td>
+            <td>4400ks</td>
           </tr>
           <tr>
-            <td>1</td>
-            <td>NPT</td>
-            <td>Mdy</td>
-            <td>A1, A2</td>
-            <td>6P/12934</td>
-            <td>3200ks</td>
+             <td>1</td>
+            <td> {{$route->fromTownship->name}} </td>
+            <td> {{$route->toTownship->name}} </td>
+            <td>B21, A2</td>
+            <td> {{ $route->bus->bus_no }}</td>
+            <td> {{ $route->bus->name }}</td>
+            <td>4400ks</td>
           </tr>
           <tr>
-            <td>1</td>
-            <td>Yangon</td>
-            <td>Mdy</td>
-            <td>A1, A2</td>
-            <td>12N/12934</td>
-            <td>300ks</td>
+             <td>1</td>
+            <td> {{$route->fromTownship->name}} </td>
+            <td> {{$route->toTownship->name}} </td>
+            <td>B21, A2</td>
+            <td> {{ $route->bus->bus_no }}</td>
+            <td> {{ $route->bus->name }}</td>
+            <td>4400ks</td>
           </tr>
           </tbody>
         </table>

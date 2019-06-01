@@ -1,4 +1,4 @@
-@extends('layouts/admin_layout')
+	@extends('layouts/admin_layout')
 @section('title', 'Dashboard | Add route')
 @section('content')
 
@@ -54,6 +54,10 @@
 					</option>
 					@endforeach
 				</select>
+			</div>
+			<div class="form-group">
+				<label for="number">Price</label>
+				<input type="number" class="form-control" id="price" name="price" required="" value="10000">
 			</div>
 			<button type="submit" class="btn btn-primary">Submit</button>
 			</form

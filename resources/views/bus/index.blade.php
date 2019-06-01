@@ -13,7 +13,7 @@
 	<div class="container">
 		<div class="row" id="route">
 			<div class="col-lg-8 col-md-8 col-sm-8">
-				<form action="#" method="get">
+				<form action="{{route('bus.index')}}" method="get">
 					<label class="text-my" id="from-to">Leaving From</label>
 					<select id="from" name="route[]" class="form-control chosen select2" required="">
 						<option value="">Select a location</option>
