@@ -55,8 +55,18 @@ class BusController extends Controller
         return view('auth.login');
     }
 
-    public function guest() {
-        return view('bus.guest');
+    public function guest(Request $request) 
+    {
+        $request->session()->put('total', $request->sub_totl);
+        $totalAmount = $request->session()->get('total');       
+
+         $request->session()->put('seat', $request->seat);
+        $seat = $request->session()->get('seat');         
+
+        $request->session()->put('route', $request->route);
+        $route = $request->session()->get('route');
+
+        return view('bus.guest',compact('totalAmount','seat','route'));
     }
     /**
      * Show the form for creating a new resource.
