@@ -46,6 +46,12 @@
 					@endforeach
 				</select>
 			</div>
+
+			<div class="form-group">
+				<label for="name">Price</label>
+				<input type="number" class="form-control" id="name" name="price" required="" value="{{ $route->price }}">
+			</div>
+
 			<div class="form-group">
 				<label for="exampleInputEmail1">Bus id</label>
 				<select id="from" name="bus_id" class="form-control chosen select2">

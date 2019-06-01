@@ -25,6 +25,7 @@
 							<th scope="col">Bus Number</th>
 							<th scope="col">From</th>
 							<th scope="col">To</th>
+							<th scope="col">Price</th>
 							<th scope="col">Created_at</th>
 							<th scope="col">View Seat</th>
 							<th scope="col">Delete</th>
@@ -39,6 +40,7 @@
 							<td>{{ $route->bus['bus_no'] ?? '-'}}</td>
 							<td>{{ $route->fromTownship['name'] ?? '-' }}</td>
 							<td>{{ $route->toTownship['name'] ?? '-' }} </td>
+							<td>{{ $route->price ?? '-' }} </td>
 							<td>{{ $route->created_at->toDateString() }}</td>
 							<td>
 								<form action="{{ route('route.show', $route->id) }}" method="POST">
