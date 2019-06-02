@@ -83,10 +83,10 @@
 											<div id="5_8" role="checkbox" value="42" aria-checked="false" focusable="true" tabindex="-1" class=" seatNumber seatUnavailable">8</div>
 										</div>                   
 
-										<div class="seatsReceipt col-lg-2">
+										<!-- <div class="seatsReceipt col-lg-2">
 											<p><strong>Selected Seats: <span class="seatsAmount" />0 </span></strong> <button id="btnClear" class="btn">Clear</button></p>
 											<ul id="seatsList" class="nav nav-stacked"></ul>
-										</div>
+										</div> -->
 								</div>
 							</div>
 						</div>
@@ -158,8 +158,8 @@
 
 								<h3 class="text-my text-muted text-center ">Please select (<span class="seatsAmount"></span> ) Seats.</h3>
 								<div class="row" id="search">
-								<input  class="amount" value="0" name="sub_totl">
-								<input  class="seat" name="seat" value="0">
+								<input  class="amount" value="0" name="sub_totl" type="hidden">
+								<input  class="seat" name="seat" type="hidden">
 								
 								<p></p>
 
