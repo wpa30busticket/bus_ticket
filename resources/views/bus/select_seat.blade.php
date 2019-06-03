@@ -266,13 +266,11 @@
 			<div class="row"  id="page1">
 				<div class="col-md-3 col-sm-5 col-xs-6 margin-top-sm">
 					<label class="text-my hidden-lg hidden-md">Leaving From</label>
-
 					<select class="form-control text-my" name="sourceId" id="sourceId" tabindex="-1" disabled="">
 						<option class="text-my" value="">--- Select ---</option>
 
 						<option class="text-my" value="Yangon" selected="">
 
-							Yangon
 
 						</option>
 
@@ -293,17 +291,11 @@
 
 					<select class="form-control text-my" name="destinationId" id="destinationId" tabindex="-1" disabled="">
 						<option class="text-my" value="">--- Select ---</option>
-
-						
-						<option class="text-my" value="Wetpoat" selected="">
-
-							Wetpoat
+						<option class="text-my"  selected="">
 
 						</option>
-
-
-
 					</select>
+
 					<span class="select2 select2-container select2-container--bootstrap" dir="ltr" style="width: 100%;"><span class="selection"><span class="select2-selection select2-selection--single text-my" role="combobox" aria-haspopup="true" aria-expanded="false" tabindex="0" aria-labelledby="select2-destinationId-container"><span class="select2-selection__rendered" id="select2-destinationId-container" title="
 
 						Monywa

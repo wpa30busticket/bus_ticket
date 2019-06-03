@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 use Carbon\Carbon;
 use Illuminate\Http\Request;
-
+use Session;
 class VoucherController extends Controller
 {
     /**
@@ -13,14 +13,16 @@ class VoucherController extends Controller
      */
     public function index()
     {
-        $data = \Session::get('guest');
-        $id = \Session::get('id');
+        $data = Session::get('guest');
+        $id = Session::get('id');
+        $seat  = Session::get('seat');
+        $total  = Session::get('total');
         // $id = $request->session()->get('id');
 
         $route = \App\Route::findOrFail($id);
 
         // dd($route);
-        return view('bus.voucher', compact('data', 'route'));
+        return view('bus.voucher', compact('data', 'route', 'seat', 'total'));
     }
 
     /**

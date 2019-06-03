@@ -4,15 +4,18 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\TicketBooking;
-
+use Session;
 class PaymentController extends Controller
 {
 
     public function index() {
-    	$guest = \Session::get('guest');
-    	$totalAmount = \Session::get('totalAmount');
-    	$seat = \Session::get('seat');
-    	$route = \Session::get('route');
+    	// $guest = \Session::get('guest');
+    	// $totalAmount = \Session::get('totalAmount');
+    	// $seat = \Session::get('seat');
+    	// $route = \Session::get('route');
+
+        $total  = Session::get('total');
+       
         // dd($route);
     	// return $route;
     	// $booking = new TicketBooking;
@@ -22,6 +25,6 @@ class PaymentController extends Controller
     	// $booking->save();
 
 
-    	return view('bus.payment',compact('guest'));
+    	return view('bus.payment',compact('total'));
     }
 }

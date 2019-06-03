@@ -17,9 +17,9 @@
 											<div class="seatRowNumber">
 												Row 1
 											</div>
-											<div id="1_1" title="" role="checkbox" value="45" aria-checked="false" focusable="true" tabindex="-1" class=" seatNumber">1</div>
-											<div id="1_2" role="checkbox" value="45" aria-checked="false" focusable="true" tabindex="-1" class=" seatNumber ">2</div>
-											<div id="1_3" role="checkbox" value="45" aria-checked="false" focusable="true" tabindex="-1" class=" seatNumber ">3</div>
+											<div id="1_1" title="" role="checkbox" value="10000" aria-checked="false" focusable="true" tabindex="-1" class=" seatNumber">1</div>
+											<div id="1_2" role="checkbox" value="10000" aria-checked="false" focusable="true" tabindex="-1" class=" seatNumber ">2</div>
+											<div id="1_3" role="checkbox" value="10000" aria-checked="false" focusable="true" tabindex="-1" class=" seatNumber ">3</div>
 											<div id="1_4" role="checkbox" value="45" aria-checked="false" focusable="true" tabindex="-1" class=" seatNumber seatUnavailable">4</div>
 											<div id="1_5" role="checkbox" value="45" aria-checked="false" focusable="true" tabindex="-1" class=" seatNumber ">5</div>
 											<div id="1_6" role="checkbox" value="45" aria-checked="false" focusable="true" tabindex="-1" class=" seatNumber  ">6</div>
@@ -109,7 +109,9 @@
 												Route
 											</td>
 											<td class="col-md-8 text-my">
-												Yangon - Monywa
+												{{ $route->fromTownship['name'] }}
+												-
+												{{ $route->toTownship['name'] }}
 											</td>
 										</tr>
 

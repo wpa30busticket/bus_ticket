@@ -7,6 +7,7 @@ use App\Township;
 use App\Bus;
 use App\Guest;
 use Illuminate\Http\Request;
+use Session;
 
 class BusController extends Controller
 {
@@ -30,6 +31,7 @@ class BusController extends Controller
             $routes = \App\Route::where('from',$request->route[0])->where('to',$request->route[1])->get();
             $request->session()->put('routes', $routes);
             $routes = $request->session()->get('routes');
+
             return view('bus.select_seat',compact('routes'));
         }
         $request = request();
@@ -61,11 +63,11 @@ class BusController extends Controller
         $totalAmount = $request->session()->get('total');       
 
          $request->session()->put('seat', $request->seat);
-        $seat = $request->session()->get('seat');         
+        $seat = $request->session()->get('seat');  
 
         $request->session()->put('route', $request->route);
         $route = $request->session()->get('route');
-        
+
         return view('bus.guest',compact('totalAmount','seat','route'));
     }
     /**
@@ -105,9 +107,13 @@ class BusController extends Controller
         $guest->save();
         $request->session()->put('guest', $guest);
         $guest = $request->session()->get('guest');    
+
+        $test  = Session::get('guest');
+        // return $test->name;
+
         // dd($guest);
         // dd($guest['name']);    
-        return redirect()->route('bus.payment', compact("guest"));
+        return redirect()->route('bus.payment', compact("test"));
 
 
     }
