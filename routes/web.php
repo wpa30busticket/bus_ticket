@@ -43,6 +43,7 @@ Route::group(['prefix' => 'dashboard',], function( ) {
 	Route::delete('registered_users/{id}/delete', 'DashController@destroy')->name('registered_users.destroy');
 	Route::get('guest_users', 'DashController@guest')->name('guest.users');
 	Route::delete('guest_users/{id}/delete', 'DashController@guestDestroy')->name('guest_users.destroy');
+	Route::get('orders', 'DashController@order')->name('dashboard.order');
 
 	//backend sidebar //add new route and list
 	Route::get('/add-route', 'RouteController@create')->name('route.create');

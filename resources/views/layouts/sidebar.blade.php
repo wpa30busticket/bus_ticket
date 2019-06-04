@@ -32,8 +32,8 @@
           </a>   
         </li>
 
-      <li class="treeview">
-          <a href="#">
+        <li>
+          <a href="{{ route('dashboard.order') }}">
             <i class="fa fa-edit"></i> <span>Orders</span>
           </a>
         </li>

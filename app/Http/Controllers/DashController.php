@@ -2,6 +2,9 @@
 
 namespace App\Http\Controllers;
 use DB;
+use App\TicketBooking;
+use App\Guest;
+use App\User;
 use Illuminate\Http\Request;
 
 class DashController extends Controller
@@ -11,10 +14,17 @@ class DashController extends Controller
 	}
 
     public function login() {
-    	$users = DB::table('users')->get();
-        // $reg = \App\Guest::count();
-        $reg = DB::table('guests')->get();
-    	return view('backend.index', compact("users",'reg'));
+
+        $users = User::count();
+        $reg = Guest::count();
+        $order = TicketBooking::count();
+
+    	return view('backend.index', compact('users', 'reg', 'order'));
+    }
+
+    public function order() {
+        $orders = TicketBooking::get();
+        return view('backend.orders', compact("orders"));
     }
 
     public function calendar() {
@@ -22,7 +32,7 @@ class DashController extends Controller
     }
 
     public function index() {
-    	$users = DB::table('users')->get();
+    	$users = User::get();
     	return view('backend.registered_users', compact("users"));
     }
 

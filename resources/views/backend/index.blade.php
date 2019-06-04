@@ -25,14 +25,14 @@
         <!-- small box -->
         <div class="small-box bg-aqua">
           <div class="inner">
-            <h3>150</h3>
+            <h3>{{ $order }}</h3>
 
             <p>Total bookings</p>
           </div>
           <div class="icon">
             <i class="ion ion-bag"></i>
           </div>
-          <a href="#" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
+          <a href="{{ route('dashboard.order') }} " class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
         </div>
       </div>
       <!-- ./col -->
@@ -40,7 +40,7 @@
         <!-- small box -->
         <div class="small-box bg-green">
           <div class="inner">
-            <h3>{{$reg->count()}}</h3>
+            <h3> {{$reg}} </h3>
 
             <p>Guest</p>
           </div>
@@ -55,7 +55,7 @@
         <!-- small box -->
         <div class="small-box bg-green">
           <div class="inner">
-            <h3> {{ $users->count() }}</h3>
+            <h3> {{$users}} </h3>
 
             <p>Registered Users</p>
           </div>
@@ -70,7 +70,7 @@
         <!-- small box -->
         <div class="small-box bg-red">
           <div class="inner">
-            <h3>{{$reg->count() +  $users->count()}}</h3>
+            <h3>{{ $reg + $users }}</h3>
 
             <p>Unique Users</p>
           </div>
@@ -471,7 +471,7 @@
   { year: '2013', value: 20 },
   { year: '2014', value: 20 },
   ],
-  // The name of the data record attribute that contains x-values.
+  // The name of the data record attribeute that contains x-values.
   xkey: 'year',
   // A list of names of data record attributes that contain y-values.
   ykeys: ['value'],
@@ -485,8 +485,8 @@
     resize   : true,
     colors   : ['#3c8dbc', '#f56954', '#00a65a'],
     data     : [
-    { label: 'Guest users', value: {{$reg->count()}} },
-    { label: 'Registered users', value: {{$users->count()}} },
+    { label: 'Guest users', value: {{ $reg}} },
+    { label: 'Registered users', value: {{ $users }} },
     ],
     hideHover: 'auto'
   }); //end of donut chart
