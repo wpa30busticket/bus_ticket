@@ -105,15 +105,17 @@ class BusController extends Controller
         $guest->address = $request->address;
         $guest->nrc = $request->nrc;
         $guest->save();
-        $request->session()->put('guest', $guest);
-        $guest = $request->session()->get('guest');    
 
-        $test  = Session::get('guest');
-        // return $test->name;
+        $request->session()->put('data', $guest);
+        $data= $request->session()->get('data');
+
+
+        $request->session()->put('guest_id', $guest->id);
+        $guest_id = $request->session()->get('guest_id');  
 
         // dd($guest);
         // dd($guest['name']);    
-        return redirect()->route('bus.payment', compact("test"));
+        return redirect()->route('bus.payment');
 
 
     }

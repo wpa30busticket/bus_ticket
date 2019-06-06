@@ -17,31 +17,31 @@
                         </div>
                         <div class="form-group">
                             <label for="cc-payment" class="control-label mb-1">Payment amount</label>
-                            <input id="cc-payment" name="cc-payment" type="text" class="form-control" aria-required="true" aria-invalid="false" required value="{{ $total . ' ' . 'kyats' }}" disabled="">
+                            <input id="cc-payment" name="cc-payment" type="text" class="form-control" aria-required="true" aria-invalid="false" required value="{{ $total . ' ' . 'kyats' }}" disabled="" required="">
                             <span class="invalid-feedback">Enter the payment amount</span>
                         </div>
                         <div class="form-group has-success">
                             <label for="cc-name" class="control-label mb-1">Name on card</label>
-                            <input id="cc-name" name="cc-name" type="text" class="form-control cc-name" required autocomplete="cc-name" aria-required="true" aria-invalid="false" aria-describedby="cc-name-error">
+                            <input id="cc-name" name="cc-name" type="text" class="form-control cc-name" required="">
                             <span class="invalid-feedback">Enter the name as shown on credit card</span>
                         </div>
                         <div class="form-group">
                             <label for="cc-number" class="control-label mb-1">Card number</label>
-                            <input id="cc-number" name="cc-number" type="tel" class="form-control cc-number identified visa" required="" pattern="[0-9]{16}">
+                            <input id="cc-number" name="cc-number" type="tel" class="form-control cc-number identified visa" required="" pattern="[0-9]{16}" required="">
                             <span class="invalid-feedback">Enter a valid 16 digit card number</span>
                         </div>
                         <div class="row">
                             <div class="col-6">
                                 <div class="form-group">
                                     <label for="cc-exp" class="control-label mb-1">Expire date</label>
-                                    <input id="cc-exp" name="cc-exp" type="tel" class="form-control cc-exp" required placeholder="MM / YY" autocomplete="cc-exp">
+                                    <input id="cc-exp" name="cc-exp" type="tel" class="form-control cc-exp" required placeholder="MM / YY" autocomplete="cc-exp" required="">
                                     <span class="invalid-feedback">Enter the expiration date</span>
                                 </div>
                             </div>
                             <div class="col-6">
                                 <label for="x_card_code" class="control-label mb-1">Security code</label>
                                 <div class="input-group">
-                                    <input id="x_card_code" name="x_card_code" type="tel" class="form-control cc-cvc" required autocomplete="off">
+                                    <input id="x_card_code" name="x_card_code" type="tel" class="form-control cc-cvc" required autocomplete="off" required="">
                                     <span class="invalid-feedback order-last">Enter the 3-digit code on back</span>
                                     <div class="input-group-append">
                                         <div class="input-group-text">
@@ -55,7 +55,7 @@
                         </div>
                         <div class="form-group">
                             <label for="x_zip" class="control-label mb-1">Postal code</label>
-                            <input id="x_zip" name="x_zip" type="text" class="form-control" value="" data-val="true" data-val-required="Please enter the ZIP/Postal code" autocomplete="postal-code">
+                            <input id="x_zip" name="x_zip" type="text" class="form-control" value="" data-val="true" data-val-required="Please enter the ZIP/Postal code" autocomplete="postal-code" required="">
                             <span class="help-block" data-valmsg-for="x_zip" data-valmsg-replace="true"></span>
                         </div>
                         <div>
