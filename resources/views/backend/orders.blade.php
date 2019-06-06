@@ -39,7 +39,7 @@
 							<td>{{ $order->route_id }}</td>
 							<td>{{ $order->going_date}}</td>
 							<td>{{ $order->purchase_date}}</td>
-							<td>{{ $order->price}}</td>
+							<td>{{ $order->price}} kyats</td>
 							<td>{{ $order->status}}</td>
 						</tr>
 					@endforeach

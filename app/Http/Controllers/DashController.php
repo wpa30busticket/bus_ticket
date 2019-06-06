@@ -5,6 +5,7 @@ use DB;
 use App\TicketBooking;
 use App\Guest;
 use App\User;
+use App\Route;
 use Illuminate\Http\Request;
 
 class DashController extends Controller
@@ -23,8 +24,9 @@ class DashController extends Controller
     }
 
     public function order() {
+        $route = Route::get();
         $orders = TicketBooking::get();
-        return view('backend.orders', compact("orders"));
+        return view('backend.orders', compact("orders", "route"));
     }
 
     public function calendar() {
