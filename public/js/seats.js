@@ -1,6 +1,13 @@
    // Clicking any seat
       $(".seatNumber").click(
           function () {
+              var thisId = $(this).attr('id');
+              var id = thisId.split("_");
+              var price = $(this).attr('value');
+              var seatDetails = "Row: " + id[0] + " Seat:" + id[1];
+              var freeSeats = parseInt($('.freeSeats').first().text());
+              var selectedSeats = parseInt($(".seatSelected").length);
+
               if (!$(this).hasClass("seatUnavailable")){
                   // If selected, unselect it
                   if ($(this).hasClass("seatSelected")) {
@@ -11,18 +18,23 @@
                       // Calling functions to update checkout total and seat counter.
                       removeFromCheckout(price);
                       refreshCounter();
+                      //remove seat
+                      $(".seat").val(function() {
+                          var get_data = $(this).val();
+                          // alert(get_data);
+                          var data_arr = get_data.split(',');
+                          // var remove_index = data_arr.indexOf(id[1]);
+                          data_arr = jQuery.grep(data_arr, function(value){
+                            return value != id[1];
+                          })
+                          var res_string =  data_arr.toString();
+                          return res_string;
+                        });
                   }
                   else {
                       // else, select it
                       // getting values from Seat
-                      var thisId = $(this).attr('id');
-                      var id = thisId.split("_");
-                      var price = $(this).attr('value');
-                      var seatDetails = "Row: " + id[0] + " Seat:" + id[1];
-
-
-                      var freeSeats = parseInt($('.freeSeats').first().text());
-                      var selectedSeats = parseInt($(".seatSelected").length);
+                     
 
                       // If you have free seats available the price of this one will be 0.
                       if (selectedSeats < freeSeats) {
@@ -36,7 +48,7 @@
                           $(".seat").val(function() {
                               var get_data = this.value + ',' + number;
                               var first_car = get_data.charAt(0);
-                              if(first_car == ','){
+                              if(first_car == ',') {
                                 return get_data.substr(1);
                               } else {
                                 return get_data;

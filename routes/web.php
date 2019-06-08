@@ -79,4 +79,4 @@ Route::group(['prefix' => 'dashboard',], function( ) {
 	Route::post('/seats/{id}/update', 'SeatController@update')->name('seats.update');
 });
 
-// Auth::routes();
+Auth::routes();
