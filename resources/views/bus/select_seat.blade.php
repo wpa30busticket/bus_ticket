@@ -349,9 +349,9 @@
 									</div>
 								</div>
 								<div class="col-md-3 col-xs-5">
-									<div class="box margin-top-sm">
+									<!-- <div class="box margin-top-sm">
 										<img id="bus-logo" src="img/shwe-sin-satkyar.png" class="img-fluid">
-									</div>
+									</div> -->
 
 								</div>
 								<div class="col-md-3 col-xs-7 text-right">
@@ -367,7 +367,7 @@
 					<!-- first -->
 					@endforeach
 
-						@else
+					@else
 						<div class="wrapper"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080">
   <title>404</title>
   <g id="Layer_12 yellow-back-fig" data-name="Layer 12">

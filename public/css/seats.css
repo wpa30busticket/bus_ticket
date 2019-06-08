@@ -13,13 +13,17 @@
   color: #FFF;
   border-radius: 5px;
   cursor: default;
-  height: 25px;
-  width: 25px;
+  height: 40px;
+  width: 40px;
   line-height: 25px;
   text-align: center;
 }
 .seatRow {
   padding: 10px;
+  font-size: 15px;
+}
+.seatsChart{
+  margin: 0 auto;
 }
 .seatSelected {
   background-color: lightgreen;
