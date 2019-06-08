@@ -14,20 +14,29 @@ class BusFilters extends Filters
 
 	public function route($value)
     {
-    	$from = $value[0];
-    	$to = $value[1];
+//     	$from = $value[0];
+//     	$to = $value[1];
 
-    	$route = \App\Route::where('from',$from)->where('to',$to)->first();
+//     	$routes = \App\Route::where('from',$from)->where('to',$to)->with('seat')->get();
 
-    	if ($route) {
-    		// return $this->builder->whereHas('seat', function($query) use ($route) {
-    		// 	$query->where('route_id',$route->id)->where('status',0);
-    		// });
-	        return $this->builder->whereHas('booking', function($query) use ($route) {
-	        	$query->where('route_id',$route->id);
-	        });
+//     	if ($routes) {
+//     		foreach ($routes as $key => $route) {
+//     			// return $this->builder->whereHas('seat', function($query) use ($route) {
+//     		// 	$query->where('route_id',$route->id)->where('status',0);
+//     		// });
+// 		        return  $this->builder->whereHas('booking', function($query) use ($route) {
+// 		        	$query->where('route_id',$route->id);
+// 		        });
+//     		}
 
-    	} 
+//     	} 
+// //     	dd($booking);
+
+// //     	    	foreach ($routes as $key => $value) {
+// //     		$seat = \App\Seat::where('route_id',$value->id)->where('status',0)->get();
+// //     		dd($seat);
+// //     	}
+// // dd($seat);
 
     }
 

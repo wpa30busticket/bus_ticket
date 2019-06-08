@@ -15,19 +15,25 @@
 								<div class="seatsChart col-lg-10">
 										<div class="seatRow">
 											<div class="seatRowNumber">
-												Row 1
-											</div>
-											<div id="1_1" title="" role="checkbox" value="10000" aria-checked="false" focusable="true" tabindex="-1" class=" seatNumber">1</div>
-											<div id="1_2" role="checkbox" value="10000" aria-checked="false" focusable="true" tabindex="-1" class=" seatNumber ">2</div>
-											<div id="1_3" role="checkbox" value="10000" aria-checked="false" focusable="true" tabindex="-1" class=" seatNumber ">3</div>
-											<div id="1_4" role="checkbox" value="45" aria-checked="false" focusable="true" tabindex="-1" class=" seatNumber seatUnavailable">4</div>
-											<div id="1_5" role="checkbox" value="45" aria-checked="false" focusable="true" tabindex="-1" class=" seatNumber ">5</div>
-											<div id="1_6" role="checkbox" value="45" aria-checked="false" focusable="true" tabindex="-1" class=" seatNumber  ">6</div>
-											<div id="1_7" role="checkbox" value="45" aria-checked="false" focusable="true" tabindex="-1" class=" seatNumber ">7</div>
-											<div id="1_8" role="checkbox" value="45" aria-checked="false" focusable="true" tabindex="-1" class=" seatNumber ">8</div>
-										</div>
+									@foreach($seats->slice(0,5) as  $seat)
 
-										<div class="seatRow">
+												<div id="1_{{$seat->seat_no}}" title="" role="checkbox" value="{{$seat->seat_no}}" aria-checked="false" focusable="true" tabindex="-1" class=" seatNumber {{$seat->status == 1 ? 'seatUnavailable' : ''}}">{{ $seat->seat_no }} </div>
+									@endforeach
+
+											</div>
+											
+										</div>		
+										<div class="seatRow">									
+										<div class="seatRowNumber">
+									@foreach($seats->slice(5,10) as  $seat)
+
+												<div id="1_1" title="" role="checkbox" value="{{$seat->id}}" aria-checked="false" focusable="true" tabindex="-1" class=" seatNumber {{$seat->status == 1 ? 'seatUnavailable' : ''}}">{{ $seat->seat_no }} </div>
+									@endforeach
+											</div>
+											
+										</div>
+	
+										<!-- <div class="seatRow">
 											<div class="seatRowNumber">
 												Row 2
 											</div>
@@ -81,7 +87,7 @@
 											<div id="5_6" role="checkbox" value="42" aria-checked="false" focusable="true" tabindex="-1" class=" seatNumber  ">6</div>
 											<div id="5_7" role="checkbox" value="42" aria-checked="false" focusable="true" tabindex="-1" class=" seatNumber ">7</div>
 											<div id="5_8" role="checkbox" value="42" aria-checked="false" focusable="true" tabindex="-1" class=" seatNumber seatUnavailable">8</div>
-										</div>                   
+										</div> 
 
 										<!-- <div class="seatsReceipt col-lg-2">
 											<p><strong>Selected Seats: <span class="seatsAmount" />0 </span></strong> <button id="btnClear" class="btn">Clear</button></p>

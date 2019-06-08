@@ -6,6 +6,9 @@ use App\Filters\BusFilters;
 use App\Township;
 use App\Bus;
 use App\Guest;
+use App\Route;
+use App\Seat;
+use App\TicketBooking;
 use Illuminate\Http\Request;
 use Session;
 
@@ -16,24 +19,22 @@ class BusController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index(BusFilters $filter,Request $request)
+    public function index(Request $request)
     {
-
-            // dd($request->all());
         $townships = Township::get();
         if (request('route')) {
-            $route = Bus::filter($filter)->get();
-            if (!$route->isEmpty()) {
-                $routes = null;
-                return view('bus.select_seat',compact('routes'));
-            }
+            $routes = Route::where('from',$request->route[0])->where('to',$request->route[1])->with('seat')->get();
+            // foreach ($routes as $key => $value) {
+            //     $booking = TicketBooking::where('route_id',$value->id)->first();
+            //     $seat = Seat::where('route_id',$value->id)->where('status',0)->get();
+            // }
 
-            $routes = \App\Route::where('from',$request->route[0])->where('to',$request->route[1])->get();
             $request->session()->put('routes', $routes);
             $routes = $request->session()->get('routes');
 
-            return view('bus.select_seat',compact('routes'));
+            return view('bus.select_seat',compact('routes','seat'));
         }
+
         $request = request();
         return view('bus.index',compact('townships','request'));
     }
@@ -49,8 +50,15 @@ class BusController extends Controller
         $id = $request->session()->get('id');
 
         $route = \App\Route::findOrFail($id);
+        // $booking = TicketBooking::where('route_id',$route->id)->first();
+        $seats = Seat::where('route_id',$route->id)->get();
+        $firstRows = Seat::where('route_id',$route->id)->where('row',1)->get();
+        $secondRows = Seat::where('route_id',$route->id)->where('row',2)->get();
         
-        return view('bus.seats',compact('route'));
+
+        $bookingSeats = Seat::where('route_id',$route->id)->where('status',1)->get();
+        
+        return view('bus.seats',compact('route','seats','bookingSeats','firstRows','secondRows'));
     }
 
     public function customerlogin() {

@@ -18,6 +18,7 @@ class CreateTicketBookingsTable extends Migration
             $table->unsignedInteger('user_id')->index();
             $table->unsignedInteger('bus_id')->index();
             $table->unsignedInteger('route_id')->index();
+            $table->string('seat');
             $table->date('going_date');
             $table->date('purchase_date');
             $table->string('price');

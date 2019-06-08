@@ -22,8 +22,10 @@
 						<tr>
 							<th scope="col">#</th>
 							<th scope="col">User name</th>
-							<th scope="col">Bus id</th>
-							<th scope="col">Route</th>
+							<th scope="col">Bus name</th>
+							<th scope="col">From</th>
+							<th scope="col">to</th>
+							<th scope="col">Seat</th>
 							<th scope="col">Going date</th>
 							<th scope="col">Purchase date</th>
 							<th scope="col">Price</th>	
@@ -34,9 +36,11 @@
 					@foreach($orders as $order)
 						<tr>
 							<td>{{ $order->id }}</td>
-							<td>{{ $order->user_id}}</td>
-							<td>{{ $order->bus_id}}</td>
-							<td>{{ $order->route_id }}</td>
+							<td>{{ $order->guestName->name ?? $order->userName->name}}</td>
+							<td>{{ $order->busName->name}}</td>
+							<td>{{ $order->route->fromTownship->name}}</td>
+							<td>{{ $order->route->toTownship->name}}</td>
+							<td>{{ $order->seat ? $order->seat : "-" }}</td>
 							<td>{{ $order->going_date}}</td>
 							<td>{{ $order->purchase_date}}</td>
 							<td>{{ $order->price}} kyats</td>
