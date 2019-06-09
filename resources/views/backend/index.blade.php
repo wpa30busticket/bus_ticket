@@ -496,7 +496,7 @@
             {y: 3, a: 0},
             {y: 4, a: 0},
             {y: 5, a: 0},
-            {y: 6, a: 20}
+            {y: 6, a: {{ $order}} }
         ],
         xkey: 'y',
         parseTime: false,
