@@ -36,10 +36,10 @@
 					@foreach($orders as $order)
 						<tr>
 							<td>{{ $order->id }}</td>
-							<td>{{ $order->guestName->name ?? $order->userName->name}}</td>
-							<td>{{ $order->busName->name}}</td>
-							<td>{{ $order->route->fromTownship->name}}</td>
-							<td>{{ $order->route->toTownship->name}}</td>
+							<td>{{ $order->guestName['name'] ?? $order->userName['name']}}</td>
+							<td>{{ $order->busName['name']}}</td>
+							<td>{{ $order->route->fromTownship->name }}</td>
+							<td>{{ $order->route->toTownship->name }}</td>
 							<td>{{ $order->seat ? $order->seat : "-" }}</td>
 							<td>{{ $order->going_date}}</td>
 							<td>{{ $order->purchase_date}}</td>

@@ -455,30 +455,62 @@
  <!-- ./wrapper -->
  <script>
   document.addEventListener("DOMContentLoaded", function(event) { 
-   // your page initialization code here
-   // the DOM will be available here
-   new Morris.Line({
-  // ID of the element in which to draw the chart.
-  element: 'revenue-chart',
-  // Chart data records -- each entry in this array corresponds to a point on
-  // the chart.
-  data: [
-  { year: '{{ date('Y') }}', value: 50 },
-  { year: '2009', value: 10 },
-  { year: '2010', value: 5 },
-  { year: '2011', value: 5 },
-  { year: '2012', value: 20 },
-  { year: '2013', value: 20 },
-  { year: '2014', value: 20 },
-  ],
-  // The name of the data record attribeute that contains x-values.
-  xkey: 'year',
-  // A list of names of data record attributes that contain y-values.
-  ykeys: ['value'],
-  // Labels for the ykeys -- will be displayed when you hover over the
-  // chart.
-  labels: ['Value']
-});
+//    // your page initialization code here
+//    // the DOM will be available here
+//    new Morris.Line({
+//   // ID of the element in which to draw the chart.
+//   element: 'revenue-chart',
+//   // Chart data records -- each entry in this array corresponds to a point on
+//   // the chart.
+//   data: [
+//   { month: '1', value: 50 },
+//   { month: '2', value: 10 },
+//   { month: '3', value: 5 },
+//   { month: '4', value: 5 },
+//   { month: '5', value: 20 },
+//   { month: '6', value: 20 },
+//   { month: '7', value: 20 },
+//   { month: '8', value: 20 },
+//   { month: '9', value: 20 },
+//   { month: '10', value: 20 },
+//   { month: '11', value: 20 },
+//   { month: '12', value: 20 },
+//   ],
+//   // The name of the data record attribeute that contains x-values.
+//   xkey: 'month',
+//   // A list of names of data record attributes that contain y-values.
+//   ykeys: ['value'],
+//   // Labels for the ykeys -- will be displayed when you hover over the
+//   // chart.
+//   labels: ['Value']
+// });
+
+ const monthNames = ["", "Jan", "Feb", "Mar", "Apr", "May", "Jun",
+        "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"
+    ];
+    Morris.Area({
+        element: 'revenue-chart',
+        data: [
+            {y: 1, a: 0},
+            {y: 2, a: 0},
+            {y: 3, a: 0},
+            {y: 4, a: 0},
+            {y: 5, a: 0},
+            {y: 6, a: 20}
+        ],
+        xkey: 'y',
+        parseTime: false,
+        ykeys: ['a'],
+        xLabelFormat: function (x) {
+            var index = parseInt(x.src.y);
+            return monthNames[index];
+        },
+        xLabels: "month",
+        labels: ['Series A'],
+        lineColors: ['#a0d0e0', '#3dbeee'],
+        hideHover: 'auto'
+
+    });
    // Donut Chart
    var donut = new Morris.Donut({
     element  : 'sales-chart',

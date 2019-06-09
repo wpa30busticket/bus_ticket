@@ -32,7 +32,7 @@ class BusController extends Controller
             $request->session()->put('routes', $routes);
             $routes = $request->session()->get('routes');
 
-            return view('bus.select_seat',compact('routes','seat'));
+            return view('bus.select_seat',compact('routes'));
         }
 
         $request = request();
@@ -52,13 +52,9 @@ class BusController extends Controller
         $route = \App\Route::findOrFail($id);
         // $booking = TicketBooking::where('route_id',$route->id)->first();
         $seats = Seat::where('route_id',$route->id)->get();
-        $firstRows = Seat::where('route_id',$route->id)->where('row',1)->get();
-        $secondRows = Seat::where('route_id',$route->id)->where('row',2)->get();
-        
-
         $bookingSeats = Seat::where('route_id',$route->id)->where('status',1)->get();
         
-        return view('bus.seats',compact('route','seats','bookingSeats','firstRows','secondRows'));
+        return view('bus.seats',compact('route','seats','bookingSeats'));
     }
 
     public function customerlogin() {

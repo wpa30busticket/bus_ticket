@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 use App\Route;
+use App\Seat;
 use Illuminate\Http\Request;
 use DB;
 class RouteController extends Controller
@@ -62,8 +63,10 @@ class RouteController extends Controller
      */
     public function show($id)
     {
-        $bus = Route::find($id);
-        return $bus;
+        // $buses = Route::find($id);
+
+        $seats = Seat::where('route_id', $id)->get();
+        return view("backend.route.show", compact("seats"));
     }
 
     /**

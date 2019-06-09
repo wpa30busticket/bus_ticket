@@ -14,24 +14,48 @@
 							<div class="row" >
 								<div class="seatsChart col-lg-10">
 										<div class="seatRow">
-											<div class="seatRowNumber">
-									@foreach($seats->slice(0,5) as  $seat)
-
+									@foreach($seats->slice(0,4) as  $seat)
 												<div id="1_{{$seat->seat_no}}" title="" role="checkbox" value="{{$seat->seat_no}}" aria-checked="false" focusable="true" tabindex="-1" class=" seatNumber {{$seat->status == 1 ? 'seatUnavailable' : ''}}">{{ $seat->seat_no }} </div>
 									@endforeach
-
-											</div>
 											
 										</div>		
 										<div class="seatRow">									
-										<div class="seatRowNumber">
-									@foreach($seats->slice(5,10) as  $seat)
-
-												<div id="1_1" title="" role="checkbox" value="{{$seat->id}}" aria-checked="false" focusable="true" tabindex="-1" class=" seatNumber {{$seat->status == 1 ? 'seatUnavailable' : ''}}">{{ $seat->seat_no }} </div>
+									@foreach($seats->slice(4,4) as  $seat)
+												<div id="2_{{$seat->seat_no}}" title="" role="checkbox" value="{{$seat->id}}" aria-checked="false" focusable="true" tabindex="-1" class=" seatNumber {{$seat->status == 1 ? 'seatUnavailable' : ''}}">{{ $seat->seat_no }} </div>
 									@endforeach
-											</div>
 											
 										</div>
+										<div class="seatRow">									
+									@foreach($seats->slice(8,4) as  $seat)
+												<div id="3_{{$seat->seat_no}}" title="" role="checkbox" value="{{$seat->id}}" aria-checked="false" focusable="true" tabindex="-1" class=" seatNumber {{$seat->status == 1 ? 'seatUnavailable' : ''}}">{{ $seat->seat_no }} </div>
+									@endforeach
+											
+										</div>
+										<div class="seatRow">									
+									@foreach($seats->slice(12,4) as  $seat)
+												<div id="4_{{$seat->seat_no}}" title="" role="checkbox" value="{{$seat->id}}" aria-checked="false" focusable="true" tabindex="-1" class=" seatNumber {{$seat->status == 1 ? 'seatUnavailable' : ''}}">{{ $seat->seat_no }} </div>
+									@endforeach
+											
+										</div>
+										<div class="seatRow">									
+									@foreach($seats->slice(16,4) as  $seat)
+												<div id="5_{{$seat->seat_no}}" title="" role="checkbox" value="{{$seat->id}}" aria-checked="false" focusable="true" tabindex="-1" class=" seatNumber {{$seat->status == 1 ? 'seatUnavailable' : ''}}">{{ $seat->seat_no }} </div>
+									@endforeach
+											
+										</div>
+										<div class="seatRow">									
+									@foreach($seats->slice(20,4) as  $seat)
+												<div id="6_{{$seat->seat_no}}" title="" role="checkbox" value="{{$seat->id}}" aria-checked="false" focusable="true" tabindex="-1" class=" seatNumber {{$seat->status == 1 ? 'seatUnavailable' : ''}}">{{ $seat->seat_no }} </div>
+									@endforeach
+											
+										</div>
+										<div class="seatRow">									
+									@foreach($seats->slice(24,4) as  $seat)
+												<div id="7_{{$seat->seat_no}}" title="" role="checkbox" value="{{$seat->id}}" aria-checked="false" focusable="true" tabindex="-1" class=" seatNumber {{$seat->status == 1 ? 'seatUnavailable' : ''}}">{{ $seat->seat_no }} </div>
+									@endforeach
+											
+										</div>
+
 	
 										<!-- <div class="seatRow">
 											<div class="seatRowNumber">
@@ -59,7 +83,8 @@
 
 						<div class="panel panel-default">
 							<div class="panel-heading text-my">
-								Trip Information
+								Trip Information 
+
 							</div>
 							<div class="panel-body">
 
@@ -81,7 +106,7 @@
 												Departure Time
 											</td>
 											<td>
-												Mar 18, 08:00 AM
+												Mar 18, 08:00 AM 
 											</td>
 										</tr>
 
@@ -90,13 +115,15 @@
 												Selected Seats
 											</td>
 											<td>
-												<div class="badge badge-pill badge-success"><ul id="seatsList" class="nav nav-stacked"></ul></div>
+												<div> 
+													<ul id="seatsList" class="nav nav-stacked badge badge-success"></ul>
+												</div>
 											</td>
 										</tr>
 
 										<tr>
 											<td class="col-md-4 text-my">
-												Number of Seats
+												Number of Seats 
 											</td>
 											<td class="col-md-8 text-my">
 												<div class="seatsAmount">0</div>
