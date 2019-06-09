@@ -7,6 +7,11 @@
 		<div class="row">
 			<div class="col-md-7">
 				<div class="panel panel-default" data-time-period="AM" data-operator-id="10">
+					@if ( $message = Session::get('error'))
+					<div class="alert alert-danger alert-block">
+						<strong>{{ $message }}</strong>
+					</div>
+					@endif
 					<div class="panel-heading text-my">
 						Please select seats here.
 					</div>
@@ -15,43 +20,43 @@
 								<div class="seatsChart col-lg-10">
 										<div class="seatRow">
 									@foreach($seats->slice(0,4) as  $seat)
-												<div id="1_{{$seat->seat_no}}" title="" role="checkbox" value="{{$seat->seat_no}}" aria-checked="false" focusable="true" tabindex="-1" class=" seatNumber {{$seat->status == 1 ? 'seatUnavailable' : ''}}">{{ $seat->seat_no }} </div>
+												<div id="1_{{$seat->seat_no}}" title="" role="checkbox" value="10000" aria-checked="false" focusable="true" tabindex="-1" class=" seatNumber {{$seat->status == 1 ? 'seatUnavailable' : ''}}">{{ $seat->seat_no }} </div>
 									@endforeach
 											
 										</div>		
 										<div class="seatRow">									
 									@foreach($seats->slice(4,4) as  $seat)
-												<div id="2_{{$seat->seat_no}}" title="" role="checkbox" value="{{$seat->id}}" aria-checked="false" focusable="true" tabindex="-1" class=" seatNumber {{$seat->status == 1 ? 'seatUnavailable' : ''}}">{{ $seat->seat_no }} </div>
+												<div id="2_{{$seat->seat_no}}" title="" role="checkbox" value="10000" aria-checked="false" focusable="true" tabindex="-1" class=" seatNumber {{$seat->status == 1 ? 'seatUnavailable' : ''}}">{{ $seat->seat_no }} </div>
 									@endforeach
 											
 										</div>
 										<div class="seatRow">									
 									@foreach($seats->slice(8,4) as  $seat)
-												<div id="3_{{$seat->seat_no}}" title="" role="checkbox" value="{{$seat->id}}" aria-checked="false" focusable="true" tabindex="-1" class=" seatNumber {{$seat->status == 1 ? 'seatUnavailable' : ''}}">{{ $seat->seat_no }} </div>
+												<div id="3_{{$seat->seat_no}}" title="" role="checkbox" value="10000" aria-checked="false" focusable="true" tabindex="-1" class=" seatNumber {{$seat->status == 1 ? 'seatUnavailable' : ''}}">{{ $seat->seat_no }} </div>
 									@endforeach
 											
 										</div>
 										<div class="seatRow">									
 									@foreach($seats->slice(12,4) as  $seat)
-												<div id="4_{{$seat->seat_no}}" title="" role="checkbox" value="{{$seat->id}}" aria-checked="false" focusable="true" tabindex="-1" class=" seatNumber {{$seat->status == 1 ? 'seatUnavailable' : ''}}">{{ $seat->seat_no }} </div>
+												<div id="4_{{$seat->seat_no}}" title="" role="checkbox" value="10000" aria-checked="false" focusable="true" tabindex="-1" class=" seatNumber {{$seat->status == 1 ? 'seatUnavailable' : ''}}">{{ $seat->seat_no }} </div>
 									@endforeach
 											
 										</div>
 										<div class="seatRow">									
 									@foreach($seats->slice(16,4) as  $seat)
-												<div id="5_{{$seat->seat_no}}" title="" role="checkbox" value="{{$seat->id}}" aria-checked="false" focusable="true" tabindex="-1" class=" seatNumber {{$seat->status == 1 ? 'seatUnavailable' : ''}}">{{ $seat->seat_no }} </div>
+												<div id="5_{{$seat->seat_no}}" title="" role="checkbox" value="10000" aria-checked="false" focusable="true" tabindex="-1" class=" seatNumber {{$seat->status == 1 ? 'seatUnavailable' : ''}}">{{ $seat->seat_no }} </div>
 									@endforeach
 											
 										</div>
 										<div class="seatRow">									
 									@foreach($seats->slice(20,4) as  $seat)
-												<div id="6_{{$seat->seat_no}}" title="" role="checkbox" value="{{$seat->id}}" aria-checked="false" focusable="true" tabindex="-1" class=" seatNumber {{$seat->status == 1 ? 'seatUnavailable' : ''}}">{{ $seat->seat_no }} </div>
+												<div id="6_{{$seat->seat_no}}" title="" role="checkbox" value="10000" aria-checked="false" focusable="true" tabindex="-1" class=" seatNumber {{$seat->status == 1 ? 'seatUnavailable' : ''}}">{{ $seat->seat_no }} </div>
 									@endforeach
 											
 										</div>
 										<div class="seatRow">									
 									@foreach($seats->slice(24,4) as  $seat)
-												<div id="7_{{$seat->seat_no}}" title="" role="checkbox" value="{{$seat->id}}" aria-checked="false" focusable="true" tabindex="-1" class=" seatNumber {{$seat->status == 1 ? 'seatUnavailable' : ''}}">{{ $seat->seat_no }} </div>
+												<div id="7_{{$seat->seat_no}}" title="" role="checkbox" value="10000" aria-checked="false" focusable="true" tabindex="-1" class=" seatNumber {{$seat->status == 1 ? 'seatUnavailable' : ''}}">{{ $seat->seat_no }} </div>
 									@endforeach
 											
 										</div>

@@ -32,7 +32,7 @@
 
 			<div class="form-group">
 				<label for="number">price</label>
-				<input type="number" class="form-control" id="number" placeholder="Enter bus number" name="price" required="">
+				<input type="number" class="form-control" id="number" placeholder="Enter bus number" name="price" value="10000" required="">
 			</div>
 
 			<div class="form-group">

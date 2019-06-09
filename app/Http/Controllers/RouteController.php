@@ -66,7 +66,9 @@ class RouteController extends Controller
         // $buses = Route::find($id);
 
         $seats = Seat::where('route_id', $id)->get();
-        return view("backend.route.show", compact("seats"));
+        $route = Route::find($id);
+        // return $route;
+        return view("backend.route.show", compact("seats", "route"));
     }
 
     /**
@@ -93,13 +95,13 @@ class RouteController extends Controller
     public function update(Request $request, $id)
     {
         $request->validate([
-        'bus_id'=> 'required',
-        'from'=> 'required',
-        'to'=> 'required',
-    ]);
-      $route = \App\Route::find($id);
-      $route->update($request->except("_token"));
-      return redirect()->route('route.index');
+            'bus_id'=> 'required',
+            'from'=> 'required',
+            'to'=> 'required',
+        ]);
+        $route = \App\Route::find($id);
+        $route->update($request->except("_token"));
+        return redirect()->route('route.index');
     }
 
     /**

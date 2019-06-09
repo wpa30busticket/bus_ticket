@@ -29,7 +29,6 @@
 							<th scope="col">Going date</th>
 							<th scope="col">Purchase date</th>
 							<th scope="col">Price</th>	
-							<th scope="col">Status</th>	
 						</tr>
 					</thead>
 					<tbody>
@@ -37,7 +36,7 @@
 						<tr>
 							<td>{{ $order->id }}</td>
 							<td>{{ $order->guestName['name'] ?? $order->userName['name']}}</td>
-							<td>{{ $order->busName['name']}}</td>
+							<td>{{ $order->busName['name'] }}</td>
 							<td>{{ $order->route->fromTownship->name }}</td>
 							<td>{{ $order->route->toTownship->name }}</td>
 							<td>{{ $order->seat ? $order->seat : "-" }}</td>

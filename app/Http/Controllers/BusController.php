@@ -63,7 +63,8 @@ class BusController extends Controller
 
     public function guest(Request $request) 
     {
-        $request->session()->put('total', $request->sub_totl);
+        if ($request->sub_totl > 0) {
+            $request->session()->put('total', $request->sub_totl);
         $totalAmount = $request->session()->get('total');       
 
          $request->session()->put('seat', $request->seat);
@@ -73,6 +74,11 @@ class BusController extends Controller
         $route = $request->session()->get('route');
 
         return view('bus.guest',compact('totalAmount','seat','route'));
+        }
+        else {
+            return back()->with('error', 'Please choose atleast one seat.');
+        }
+        
     }
     /**
      * Show the form for creating a new resource.
