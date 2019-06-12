@@ -25,14 +25,14 @@
         <!-- small box -->
         <div class="small-box bg-aqua">
           <div class="inner">
-            <h3>{{ $order }}</h3>
+            <h3> 21</h3>
 
             <p>Total bookings</p>
           </div>
           <div class="icon">
             <i class="ion ion-bag"></i>
           </div>
-          <a href="{{ route('dashboard.order') }} " class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
+          <a href="# " class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
         </div>
       </div>
       <!-- ./col -->
@@ -40,14 +40,14 @@
         <!-- small box -->
         <div class="small-box bg-green">
           <div class="inner">
-            <h3> {{$reg}} </h3>
+            <h3> 12 </h3>
 
             <p>Guest</p>
           </div>
           <div class="icon">
             <i class="ion ion-person-add"></i>
           </div>
-          <a href="{{ route('guest.users') }}" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
+          <a href="#" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
         </div>
       </div>
       <!-- ./col -->
@@ -55,14 +55,14 @@
         <!-- small box -->
         <div class="small-box bg-green">
           <div class="inner">
-            <h3> {{$users}} </h3>
+            <h3> 12 </h3>
 
             <p>Registered Users</p>
           </div>
           <div class="icon">
             <i class="ion ion-person-add"></i>
           </div>
-          <a href="{{ route('registered.users') }}" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
+          <a href="#" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
         </div>
       </div>
       <!-- ./col -->
@@ -70,7 +70,7 @@
         <!-- small box -->
         <div class="small-box bg-red">
           <div class="inner">
-            <h3>{{ $reg + $users }}</h3>
+            <h3> 31</h3>
 
             <p>Unique Users</p>
           </div>
@@ -386,7 +386,7 @@
             {y: 3, a: 0},
             {y: 4, a: 0},
             {y: 5, a: 0},
-            {y: 6, a: {{ $order}}}
+            {y: 6, a: 10}
         ],
         xkey: 'y',
         parseTime: false,
@@ -407,8 +407,8 @@
     resize   : true,
     colors   : ['#3c8dbc', '#f56954', '#00a65a'],
     data     : [
-    { label: 'Guest users', value: {{ $reg}} },
-    { label: 'Registered users', value: {{ $users }} },
+    { label: 'Guest users', value:12 },
+    { label: 'Registered users', value: 12 },
     ],
     hideHover: 'auto'
   }); //end of donut chart

@@ -327,7 +327,7 @@
 				</div>
 				<!-- select_seat -->
 			<div class="col-lg-9 col-md-9 col-sm-9" id="box2">
-					@if($routes)
+					@if(!$routes->isEmpty())
 					@foreach($routes as $route)
 					<div class="trip-result">
 
