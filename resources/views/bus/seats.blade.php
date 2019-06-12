@@ -111,7 +111,7 @@
 												Departure Time
 											</td>
 											<td>
-												Mar 18, 08:00 AM 
+												{{  date('d-m-Y') }}
 											</td>
 										</tr>
 
@@ -153,8 +153,8 @@
 
 								<h3 class="text-my text-muted text-center ">Please select (<span class="seatsAmount"></span> ) Seats.</h3>
 								<div class="row" id="search">
-									<input  class="amount" value="0" name="sub_totl" type="text">
-									<input  class="seat" name="seat" type="text">
+									<input  class="amount" value="0" name="sub_totl" type="hidden">
+									<input  class="seat" name="seat" type="hidden">
 
 									<p></p>
 
